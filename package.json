@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
@@ -29,6 +26,55 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest-enzyme": "^7.1.2",
+    "react-test-renderer": "^16.13.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "coverageDirectory": "<rootDir>/test/coverage",
+    "collectCoverage": false,
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/test/jest/setupTests.js",
+    "testMatch": [
+      "<rootDir>/test/jest/**/*.test.js"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "mjs",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
     ]
   }
 }
