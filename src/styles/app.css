@@ -100,3 +100,30 @@
   text-transform: uppercase;
   text-shadow: 1px 1px 0px #000000;
 }
+
+.profile-photo {
+  border-radius: 50%;
+  border: 2px solid #000000;
+  width: 25%;
+  height: auto;
+  position: absolute;
+  top: 85%;
+  left: 37.5%;
+  filter: grayscale(100%);
+}
+
+.logo {
+  width: 35%;
+  height: auto;
+}
+
+.section-header {
+  padding-top: 100px;
+  text-align: left;
+}
+
+.section-description {
+  padding-top: 50px;
+  line-height: 38px;
+  text-align: left;
+}
