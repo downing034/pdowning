@@ -11,8 +11,8 @@ export default function Navbar() {
         </a>
         <div>
           <ul className="navbar-nav mr-auto">
-            <NavbarLink href="#" linkText="About"/>
-            <NavbarLink href="#" linkText="Portfolio"/>
+            <NavbarLink href="#about" linkText="About"/>
+            <NavbarLink href="#portfolio" linkText="Portfolio"/>
             <NavbarLink href="#" linkText="Resume"/>
           </ul>
         </div>

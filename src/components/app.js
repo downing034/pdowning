@@ -3,6 +3,7 @@ import '../styles/app.css';
 import { Button } from 'react-bootstrap';
 import Navbar from './navbar';
 import ProfilePhoto from './profile-photo';
+import Portfolio from './portfolio';
 import About from './about';
 import Footer from './footer';
 
@@ -17,6 +18,7 @@ function App() {
         <ProfilePhoto />
       </div>
       <About />
+      <Portfolio />
       <Footer />
     </div>
   );
