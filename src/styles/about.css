@@ -1,0 +1,11 @@
+.about-container {
+  height: 1200px;
+  width: 100%;
+  padding-top: 400px;
+  background-color: #f0eff0; /* whitesmoke */
+}
+
+.potato {
+  width: 60%;
+  height: auto;
+}

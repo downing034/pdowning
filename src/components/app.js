@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from '../logo.svg';
 import '../styles/app.css';
+import { Button } from 'react-bootstrap';
+import Navbar from './navbar';
+import ProfilePhoto from './profile-photo';
+import About from './about';
+import Footer from './footer';
 
 function App() {
+  const dash = '—'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="banner-image">
+        <Navbar />
+        <h1 className="nameplate">Paul Downing</h1>
+        <p className="subplate-text">{dash}{dash} Software Engineer {dash}{dash}</p>
+        <ProfilePhoto />
+      </div>
+      <About />
+      <Footer />
     </div>
   );
 }
