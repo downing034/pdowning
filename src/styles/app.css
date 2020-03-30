@@ -41,10 +41,13 @@
 
 .nav-link {
   color: white;
-
 }
 
-.navbar {
+.navbar-darken {
+  background-color: black;
+}
+
+.navbar-no-color {
   background-color: none;
 }
 
@@ -58,7 +61,7 @@
 }
 
 .banner-image {
-  background-image: url(../images/milkyway.jpeg);
+  background-image: url(../images/milkyway.jpg);
   background-color: #333F48;
   height: 1000px;
   background-size: cover;
@@ -126,4 +129,18 @@
   padding-top: 50px;
   line-height: 38px;
   text-align: left;
+}
+
+.grey-container {
+  height: 2150px;
+  width: 100%;
+  padding-top: 300px;
+  background-color: #f0eff0; /* whitesmoke */
+}
+
+.white-container {
+  height: 1200px;
+  width: 100%;
+  padding-top: 400px;
+  background-color: white; /* whitesmoke */
 }
