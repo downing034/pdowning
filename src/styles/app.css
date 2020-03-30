@@ -61,5 +61,42 @@
   background-image: url(../images/milkyway.jpeg);
   background-color: #333F48;
   height: 1000px;
-  background-size: cover;;
+  background-size: cover;
+  position: relative;
+}
+
+.nameplate {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2.2px;
+  word-spacing: -10px;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.subplate-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2.2px;
+  word-spacing: 0px;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #000000;
 }
