@@ -19,7 +19,7 @@ function App() {
       </div>
       <About />
       <Portfolio />
-      <Footer />
+      {/*<Footer />*/}
     </div>
   );
 }

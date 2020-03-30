@@ -41,10 +41,13 @@
 
 .nav-link {
   color: white;
-
 }
 
-.navbar {
+.navbar-darken {
+  background-color: black;
+}
+
+.navbar-no-color {
   background-color: none;
 }
 
@@ -58,7 +61,7 @@
 }
 
 .banner-image {
-  background-image: url(../images/milkyway.jpeg);
+  background-image: url(../images/milkyway.jpg);
   background-color: #333F48;
   height: 1000px;
   background-size: cover;
@@ -129,9 +132,9 @@
 }
 
 .grey-container {
-  height: 1200px;
+  height: 2150px;
   width: 100%;
-  padding-top: 400px;
+  padding-top: 300px;
   background-color: #f0eff0; /* whitesmoke */
 }
 
