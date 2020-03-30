@@ -1,3 +1,5 @@
+/*orange #BF5700*/
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav-link {
+  color: white;
+
+}
+
+.navbar {
+  background-color: none;
+}
+
+.navbar-nav > li {
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.navbar .navbar-nav > li > a:hover {
+  color: #BF5700;
+}
+
+.banner-image {
+  background-image: url(../images/milkyway.jpeg);
+  background-color: #333F48;
+  height: 1000px;
+  background-size: cover;;
 }
