@@ -29,9 +29,9 @@ export default class Navbar extends React.Component {
           </a>
           <div>
             <ul className="navbar-nav mr-auto">
-              <NavbarLink href="#about-panel" linkText="About"/>
-              <NavbarLink href="#portfolio-panel" linkText="Portfolio"/>
-              <NavbarLink href="#resume-panel" linkText="Resume"/>
+              <NavbarLink href="#about" linkText="About"/>
+              <NavbarLink href="#portfolio" linkText="Portfolio"/>
+              <NavbarLink href="#resume" linkText="Resume"/>
             </ul>
           </div>
 

@@ -5,6 +5,7 @@ import Navbar from './navbar';
 import ProfilePhoto from './profile-photo';
 import Portfolio from './portfolio';
 import About from './about';
+import Resume from './resume';
 import Footer from './footer';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       </div>
       <About />
       <Portfolio />
+      <Resume />
       {/*<Footer />*/}
     </div>
   );
