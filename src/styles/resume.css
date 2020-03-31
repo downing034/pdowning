@@ -36,3 +36,21 @@
 .school {
   margin-left: 15px;
 }
+
+.resume-download {
+  border: 2px solid #BF5700;
+  background-color: none;
+  color: black;
+  font-size: 12px;
+  padding: 7px 21px;
+  letter-spacing: 2px;
+}
+
+.resume-download:hover {
+  background-color: #BF5700;
+  color: white;
+}
+
+a.resume-download {
+  text-decoration: none;
+}
