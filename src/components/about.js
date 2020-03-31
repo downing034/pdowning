@@ -6,7 +6,7 @@ import Potato from '../images/potato.jpg';
 
 export default function About() {
   return (
-    <ScrollableAnchor id={'about-panel'}>
+    <ScrollableAnchor id={'about'}>
       <div className="about-container white-container">
         <div className="container">
           <div className="row">

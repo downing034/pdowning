@@ -17,9 +17,8 @@ import PlayIcon      from '../../images/play-icon.jpg';
 import RocketLeague  from '../../images/rocket-league.jpg';
 
 export default function Portfolio() {
-  const imageArray = ['yelp', 'bachelorette']
   return (
-    <ScrollableAnchor id={'portfolio-panel'}>
+    <ScrollableAnchor id={'portfolio'}>
       <div className="grey-container">
         <div className="container">
           <h1>Deployed Projects</h1>
