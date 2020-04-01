@@ -3,11 +3,6 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 import '../../styles/resume.css';
 import ResumeDownload from '../../files/P_W_Downing_Resume.pdf';
 
-import HeaderDivider from './header-divider';
-import SectionDivider from './section-divider';
-import SectionHeading from './section-heading';
-import PaddingContainer from './padding-container';
-
 // resume sections
 import ResumeMainHeader from './resume-main-header';
 import Objective from './objective';
@@ -21,7 +16,7 @@ import Education from './education';
 export default function Resume() {
   return (
     <ScrollableAnchor id={'resume'}>
-      <div className="white-container">
+      <div className="white-container resume-container">
         <div className="container">
           <div className="row">
             <div className="col-md-4 offset-4">

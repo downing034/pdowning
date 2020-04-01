@@ -37,7 +37,7 @@ export default class Navbar extends React.Component {
 
           <div>
             <ul className="nav navbar-nav float-right mr-auto">
-              <NavbarLink href="#" linkText="Contact"/>
+              <NavbarLink href="#contact" linkText="Contact"/>
             </ul>
           </div>
         </div>
