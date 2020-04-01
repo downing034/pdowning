@@ -1,0 +1,60 @@
+.resume-container {
+  height: 3300px; /* add additional length to container to cover entire resume */
+}
+
+.resume-shadow {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  border: 1px solid black;
+}
+
+.resume-contact {
+  margin-bottom: 5px;
+}
+
+.resume-contact-text {
+  margin-top: 10px;
+}
+
+.black-bar {
+  border-top: 1px solid black;
+  width: 90%;
+  margin: auto;
+}
+
+.bold-bar {
+  border-bottom: 3px solid black;
+  width: 90%;
+  margin: auto;
+}
+
+.resume-padding {
+  padding: 0px 60px 0px 60px;
+}
+
+.job-list {
+  list-style-type: none;
+}
+
+.school {
+  margin-left: 15px;
+}
+
+.resume-download {
+  border: 2px solid #BF5700;
+  background-color: none;
+  color: black;
+  font-size: 12px;
+  padding: 7px 21px;
+  letter-spacing: 2px;
+}
+
+.resume-download:hover {
+  background-color: #BF5700;
+  color: white;
+}
+
+a.resume-download {
+  text-decoration: none;
+}

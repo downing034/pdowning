@@ -142,5 +142,17 @@
   height: 1200px;
   width: 100%;
   padding-top: 400px;
-  background-color: white; /* whitesmoke */
+  background-color: white; /* white */
+}
+
+.black-container {
+  height: 500px;
+  width: 100%;
+  padding-top: 100px;
+  background-color: black; /* black */
+  color: white;
+}
+
+.underline {
+  text-decoration: underline;
 }

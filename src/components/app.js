@@ -5,7 +5,8 @@ import Navbar from './navbar';
 import ProfilePhoto from './profile-photo';
 import Portfolio from './portfolio';
 import About from './about';
-import Footer from './footer';
+import Resume from './resume';
+import Contact from './contact';
 
 function App() {
   const dash = '—'
@@ -19,7 +20,8 @@ function App() {
       </div>
       <About />
       <Portfolio />
-      {/*<Footer />*/}
+      <Resume />
+      <Contact />
     </div>
   );
 }
