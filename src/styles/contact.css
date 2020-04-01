@@ -1,0 +1,19 @@
+.credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#linkedin {
+  width: 25%;
+  height: auto;
+}
+
+#email {
+  width: 25%;
+  height: auto;
+}
+
+#copywrite {
+  color: grey;
+}

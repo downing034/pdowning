@@ -6,7 +6,7 @@ import ProfilePhoto from './profile-photo';
 import Portfolio from './portfolio';
 import About from './about';
 import Resume from './resume';
-import Footer from './footer';
+import Contact from './contact';
 
 function App() {
   const dash = '—'
@@ -21,7 +21,7 @@ function App() {
       <About />
       <Portfolio />
       <Resume />
-      {/*<Footer />*/}
+      <Contact />
     </div>
   );
 }

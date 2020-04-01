@@ -10,8 +10,8 @@ export default function EmploymentHistory() {
       <PaddingContainer>
         <EmploymentHistoryItem
           companyName="TeamSnap"
-          city="Boulder"
-          state="Colorado"
+          city="(Remote)"
+          state="Boulder, Colorado"
           jobTitle="Software Engineer"
           startYear="2019"
           endYear="Present"
