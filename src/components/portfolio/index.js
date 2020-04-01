@@ -31,21 +31,12 @@ export default function Portfolio() {
               siteUrl="https://yelpdemo34.herokuapp.com/"
              />
             <PortfolioItem
-              image={Bachelorette}
-              altText="Bachelorette Quiz Game"
-              description="Jeopardy style question site for bachelorette parties."
-              githubUrl="https://github.com/downing034/angela-bachelorette"
-              siteUrl="https://angela-bachelorette.herokuapp.com/"
-            />
-            <PortfolioItem
               image={Punterest}
               altText="Punterest"
               description="A place to share pun memes and have a good laugh."
               githubUrl="https://github.com/downing034/pinterested"
               siteUrl="https://punterest.herokuapp.com/"
             />
-          </div>
-          <div className="row">
             <PortfolioItem
               image={PortfolioSite}
               altText="Site Logo"
@@ -53,6 +44,8 @@ export default function Portfolio() {
               githubUrl="https://github.com/downing034/pdowning"
               siteUrl="https://pdowning.herokuapp.com/"
             />
+          </div>
+          <div className="row">
             <PortfolioItem
               image={TwitterApp}
               altText="Bird"
@@ -65,6 +58,7 @@ export default function Portfolio() {
               altText="Rocket League"
               description="My Rocket League Game Profile using their api."
             />
+            <EmptyPortfolioItem />
           </div>
         </div>
 
@@ -92,13 +86,13 @@ export default function Portfolio() {
               githubUrl="https://github.com/downing034/RPN-Calculator"
             />
           </div>
-          {
-            /* Leave these here for future use when projects don't have exactly
-               3 projects to a row as a filler
-            */
-          }
           <div className="row">
-            <EmptyPortfolioItem />
+            <PortfolioItem
+              image={Bachelorette}
+              altText="Bachelorette Quiz Game"
+              description="Jeopardy style question site for bachelorette parties."
+              githubUrl="https://github.com/downing034/angela-bachelorette"
+            />
             <EmptyPortfolioItem />
             <EmptyPortfolioItem />
           </div>
