@@ -65,13 +65,15 @@
     ]
   },
   "devDependencies": {
+    "chance": "^1.1.4",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "24.9.0",
     "jest-environment-jsdom-fourteen": "1.0.1",
     "jest-enzyme": "^7.1.2",
     "jest-resolve": "24.9.0",
-    "jest-watch-typeahead": "0.4.2"
+    "jest-watch-typeahead": "0.4.2",
+    "rosie": "^2.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -87,10 +89,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 0,
-        "functions": 0,
-        "lines": 0,
-        "statements": 0
+        "branches": 98,
+        "functions": 98,
+        "lines": 98,
+        "statements": 98
       }
     },
     "setupFilesAfterEnv": [

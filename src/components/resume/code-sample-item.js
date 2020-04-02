@@ -7,10 +7,10 @@ export default function CodeSampleItem(props) {
       <strong>{appName}</strong> – {appDescription}
       <br/>
       Heroku:
-      <a target="_blank" href={herokuLink}> {herokuLink}</a>
+      <a id="sample-heroku-link" target="_blank" href={herokuLink}> {herokuLink}</a>
       <br/>
       Github:
-      <a target="_blank" href={githubLink}> {githubLink}</a>
+      <a id="sample-github-link" target="_blank" href={githubLink}> {githubLink}</a>
     </p>
   )
 }

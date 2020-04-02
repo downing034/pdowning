@@ -24,7 +24,7 @@ export default function Contact() {
             </a>
           </div>
             <div className="col-md-4">
-              <a href={emailString} target="_blank">
+              <a id="email-link" href={emailString} target="_blank">
                 <img alt="email" id="email" src={Email} />
               </a>
             </div>
@@ -37,7 +37,7 @@ export default function Contact() {
             © 2020 Paul Downing. All rights reserved.
           </div>
           <div className="col-md-2 offset-6">
-            <a href="Logo source Logodesign.net" target="_blank">Logo source Logodesign.net</a>
+            <a id="logo-ref" href="Logo source Logodesign.net" target="_blank">Logo source Logodesign.net</a>
           </div>
         </div>
       </div>

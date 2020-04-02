@@ -2,11 +2,7 @@ import React from 'react';
 import '../../styles/profile.css';
 
 export default function ComingSoonPortfolioItem(props) {
-  const {
-    image,
-    altText,
-    description
-  } = props;
+  const { image, altText, description } = props;
 
   return (
     <div className="box">
