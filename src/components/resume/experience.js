@@ -4,12 +4,10 @@ import PaddingContainer from './padding-container';
 import ExperienceItem from './experience-item';
 
 // jobs
-import {
-  TEAMSNAP_SOFTWARE_ENGINEER,
-  GRANICUS_SOFTWARE_ENGINEER,
-  GRANICUS_SOFTWARE_AUTOMATION_ENGINEER,
-  PERSONAL_WORK
-} from './jobs/teamsnap_software_engineer';
+import { TEAMSNAP_SOFTWARE_ENGINEER } from './jobs/teamsnap_software_engineer';
+import { GRANICUS_SOFTWARE_ENGINEER } from './jobs/granicus_software_engineer';
+import { GRANICUS_SOFTWARE_AUTOMATION_ENGINEER } from './jobs/granicus_software_automation_engineer';
+import { PERSONAL_WORK } from './jobs/personal_work';
 
 export default function Experience() {
   return (

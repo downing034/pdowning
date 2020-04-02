@@ -11,4 +11,24 @@ describe('Navbar index', () => {
     let navbarLinks = wrapper.find('NavbarLink')
     expect(navbarLinks).toHaveLength(4)
   });
+
+  it('listenScrollEvent when scrolly < 360', () => {
+    let wrapper = shallow(<Navbar />)
+    expect(wrapper).toHaveState('navbarClasses', 'navbar-no-color')
+    window.scrollY = 200
+
+    let e = {}
+    wrapper.instance().listenScrollEvent(e);
+    expect(wrapper).toHaveState('navbarClasses', 'navbar-no-color')
+  });
+
+  it('listenScrollEvent when scrolly > 360', () => {
+    let wrapper = shallow(<Navbar />)
+    expect(wrapper).toHaveState('navbarClasses', 'navbar-no-color')
+    window.scrollY = 500
+
+    let e = {}
+    wrapper.instance().listenScrollEvent(e);
+    expect(wrapper).toHaveState('navbarClasses', 'navbar-darken')
+  });
 });

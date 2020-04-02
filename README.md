@@ -1,38 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Paul's Portfolio
 
-## Available Scripts
+A simple React.js project serving as a personal portfolio website for myself. This project was built using [Create React App](https://github.com/facebook/create-react-app), but was nearly, immediately ejected so I could add test tooling not supported by Create React App.
 
-In the project directory, you can run:
+**Project is Currently Deployed on Heroku:** [Paul's Portfolio](https://pdowning.herokuapp.com/)
+*NOTE: Project may take an extra few seconds to load on heroku since it's on the free version. Heroku sleeps apps that haven't been immediately visited to save money.*
 
-### `yarn start`
+Prerequisites:
+ - You must have  [Node](https://nodejs.org/en/download/)
+ - [Yarn]([https://yarnpkg.com/](https://yarnpkg.com/)) or some other javascript package manager (like npm) must be installed
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Run the Project
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+From the root directory:
+`yarn install` to install the necessary packages for the project
+`yarn start` Runs the app in the development mode.  Open  [http://localhost:3000](http://localhost:3000/)  to view it in the browser.
+Page will hot reload if you make edits and lint errors will show in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
+## Build the Project
+From the root directory:
+`yarn build` Builds the app for production to the  `build`  folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes.  Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Run the Tests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Testing is written using Jest, Jest-Enzyme, Rosie (factories), and Chancejs. This project has full test coverage on all components.
+From the root directory:
+`yarn test` to run all the tests in the project
+`yarn test path/to/test` replace 'path/to/test' with a specific test file to run
+`yarn test --coverage` to run all the tests in the project and get a full coverage report on each file/line. Coverage can be viewed in the terminal or by navigating to `test/coverage/lcov-report/index.html` on your computer and opening the file in a browser.
