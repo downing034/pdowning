@@ -23,7 +23,7 @@ export default function Resume() {
               <h1>Resume</h1>
             </div>
             <div className="col-md-4">
-              <a className="resume-download" href={ResumeDownload} download>DOWNLOAD RESUME →</a>
+              <a id="resume-download" className="resume-download" href={ResumeDownload} download>DOWNLOAD RESUME →</a>
             </div>
           </div>
           <br/>
