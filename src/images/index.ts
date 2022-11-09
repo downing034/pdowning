@@ -1,0 +1,15 @@
+export { default as BacheloretteQuizGame } from './bachelorette-quiz-game.jpg';
+export { default as Calculator } from './calculator.jpg';
+export { default as Email } from './email.png';
+export { default as Increment } from './increment.jpg';
+export { default as LinkedIn } from './linkedin.png';
+export { default as LogoTransparent } from './logo-transparent.png';
+export { default as MilkyWay } from './milkyway.jpg';
+export { default as PaulPhoto } from './paul.jpg';
+export { default as PlayIcon } from './play-icon.jpg';
+export { default as Potato } from './potato.jpg';
+export { default as Punterest } from './punterest.jpg';
+export { default as RocketLeague } from './rocket-league.jpg';
+export { default as ThisSite } from './this-site.jpg';
+export { default as TwitterApp } from './twitter-app.jpg';
+export { default as YelpDemo } from './yelp-photo.jpg';
