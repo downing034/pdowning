@@ -10,11 +10,12 @@ export default function TechnicalSkills() {
         <div className="col-md-1"></div>
         <div className="col-md-4">
           <ul>
-            <li>React/Redux</li>
+            <li>React/Redux, Create React App</li>
+            <li>Javascript/Typescript</li>
+            <li>React Testing library/Enzyme</li>
             <li>Ruby on Rails</li>
-            <li>TDD using jest (react), rspec, capybara, and cucumber with Selenium WebDriver</li>
-            <li>Git</li>
-            <li>Basic SQL query knowledge</li>
+            <li>Some Figma</li>
+            <li>Bootstrap/Material-UI</li>
           </ul>
         </div>
         <div className="col-md-2"></div>
@@ -25,6 +26,7 @@ export default function TechnicalSkills() {
             <li>Gitlab | Github and Jenkins CI</li>
             <li>Some AWS experience with S3 bucks and EC2 instances</li>
             <li>Some Docker experience</li>
+            <li>Netlify</li>
           </ul>
         </div>
       </div>
