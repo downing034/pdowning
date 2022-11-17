@@ -17,6 +17,13 @@ import {
 
 export const DEPLOYED_PROJECTS_ROW_ONE: Projects = [
 	{
+		image: ThisSite,
+		altText: "Site Logo",
+    description: "This. Very. Site. It's built using React without Redux.",
+    githubUrl: "https://github.com/downing034/pdowning",
+    siteUrl: "https://pdowning.netlify.app",
+	},
+	{
 		image: YelpDemo,
 		altText: "Yelp Demo",
     description: "A small clone of the Yelp! restaurant review site.",
@@ -30,13 +37,6 @@ export const DEPLOYED_PROJECTS_ROW_ONE: Projects = [
     githubUrl: "https://github.com/downing034/pinterested",
     siteUrl: "https://punterest.herokuapp.com/",
 	},
-	{
-		image: ThisSite,
-		altText: "Site Logo",
-    description: "This. Very. Site. It's built using React without Redux.",
-    githubUrl: "https://github.com/downing034/pdowning",
-    siteUrl: "https://pdowning.herokuapp.com/",
-	}
 ];
 
 export const DEPLOYED_PROJECTS_ROW_TWO: Projects = [

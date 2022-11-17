@@ -15,14 +15,14 @@ describe('Portfolio', () => {
 
     let deployedContainer = mainContainer.childAt(0)
     let firstDeployedRow = deployedContainer.childAt(1)
-    let yelp = firstDeployedRow.childAt(0)
+    let portfolioSite = firstDeployedRow.childAt(0)
+    expect(portfolioSite).toHaveProp('image', 'this-site.jpg')
+
+    let yelp = firstDeployedRow.childAt(1)
     expect(yelp).toHaveProp('image', 'yelp-photo.jpg')
 
-    let punterest = firstDeployedRow.childAt(1)
+    let punterest = firstDeployedRow.childAt(2)
     expect(punterest).toHaveProp('image', 'punterest.jpg')
-
-    let portfolioSite = firstDeployedRow.childAt(2)
-    expect(portfolioSite).toHaveProp('image', 'this-site.jpg')
 
     let secondDeployedRow = deployedContainer.childAt(2)
     let twitter = secondDeployedRow.childAt(0)
