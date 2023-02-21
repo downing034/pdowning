@@ -1,14 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { CodeSampleItem, CodeSampleItemProps } from './';
+import CodeSampleItem, { CodeSampleItemProps } from './CodeSampleItem';
+import { CodeSample } from 'constants/types';
 
 describe('CodeSampleItem', () => {
-  let props: CodeSampleItemProps = {
-      appName: 'Charlie Work',
-      appDescription: 'Site for dirty jobs',
-      herokuLink: 'charlie.work.edu',
-      githubLink: 'github.charlie.work.com'
-    }
+  let sample: CodeSample = {
+    appName: 'Charlie Work',
+    appDescription: 'Site for dirty jobs',
+    siteUrl: 'charlie.work.edu',
+    githubLink: 'github.charlie.work.com'
+  };
+
+  let props: CodeSampleItemProps = { sample };
 
   test('renders CodeSampleItem', () => {
     let wrapper = shallow(<CodeSampleItem {...props} />)
@@ -18,7 +21,7 @@ describe('CodeSampleItem', () => {
 
     expect(wrapper).toHaveText('Charlie Work – Site for dirty jobsHeroku: charlie.work.eduGithub: github.charlie.work.com')
 
-    let herokuLink = wrapper.find('a#sample-heroku-link')
+    let herokuLink = wrapper.find('a#sample-site-url')
     expect(herokuLink).toHaveProp('href', 'charlie.work.edu')
 
     let githubLink = wrapper.find('a#sample-github-link')

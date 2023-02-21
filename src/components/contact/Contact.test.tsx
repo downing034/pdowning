@@ -18,9 +18,6 @@ describe('contact', () => {
     expect(gmail).toHaveProp('src', 'email.png')
 
     let copywrite = wrapper.find('div#copywrite')
-    expect(copywrite).toHaveText('© 2020 Paul Downing. All rights reserved.')
-
-    let reference = wrapper.find('a#logo-ref')
-    expect(reference).toHaveLength(1)
+    expect(copywrite).toHaveText('© 2023 Paul Downing. All rights reserved.')
   });
 });

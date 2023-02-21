@@ -37,10 +37,7 @@ const Contact = () => {
         </div>
         <div className="row">
           <div id="copywrite" className="col-md-4">
-            © 2020 Paul Downing. All rights reserved.
-          </div>
-          <div className="col-md-2 offset-6">
-            <a id="logo-ref" href="Logo source Logodesign.net" target="_blank">Logo source Logodesign.net</a>
+            © 2023 Paul Downing. All rights reserved.
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NavbarLink from './NavbarLink';
 import { LogoTransparent } from 'images';
+
 const Navbar = () => {
   const [navbarClasses, setNavbarClasses] = useState<string>('navbar-no-color')
 

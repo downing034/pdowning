@@ -7,7 +7,19 @@ describe('App', () => {
     let wrapper = shallow(<App />)
     expect(wrapper).toHaveClassName('App')
 
-    let navbar = wrapper.find('Navbar');
-    expect(navbar).toHaveLength(1);
+    let profile = wrapper.find('Profile');
+    expect(profile).toHaveLength(1);
+
+    let about = wrapper.find('About');
+    expect(about).toHaveLength(1);
+
+    let portfolio = wrapper.find('Portfolio');
+    expect(portfolio).toHaveLength(1);
+
+    let resume = wrapper.find('Resume');
+    expect(resume).toHaveLength(1);
+
+    let contact = wrapper.find('Contact');
+    expect(contact).toHaveLength(1);
   });
 });
