@@ -116,8 +116,8 @@
 }
 
 .logo {
-  width: 35%;
-  height: auto;
+  width: auto;
+  height: 70px;
 }
 
 .section-header {
@@ -132,7 +132,7 @@
 }
 
 .grey-container {
-  height: 2500px;
+  height: 1300px;
   width: 100%;
   padding-top: 300px;
   background-color: #f0eff0; /* whitesmoke */

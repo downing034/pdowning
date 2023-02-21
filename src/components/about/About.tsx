@@ -14,7 +14,7 @@ const About = () => {
             </div>
             <div className="col-sm-5">
               <h1 className="section-header">A few fun facts about myself</h1>
-              <p className="section-description">I work out of Denver, CO, I have a dog named Potato, my favorite number is 34, sour beers are my jam, I play Rocket League like it's going out of style, I enjoy running, metal is my top Spotify genre.</p>
+              <p className="section-description">I work out of Denver, CO, I have a dog named Potato, my favorite number is 34, sour beers are my jam, I play Rocket League like it's going out of style, I enjoy running, metal is my top Spotify genre, I make/sell candles, I'm an avid cross-stitcher.</p>
             </div>
           </div>
         </div>

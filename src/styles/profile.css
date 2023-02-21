@@ -34,7 +34,21 @@
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
-  filter: grayscale(100%);
+/*  filter: grayscale(100%);*/
+}
+
+.portfolio-title {
+  background-color: #f0eff0; /* whitesmoke */
+  margin-bottom: 0px;
+}
+
+.project-details {
+  background-color: #f0eff0; /* whitesmoke */
+  text-align: left;
+}
+
+.project-details p:last-child {
+  margin-bottom: 0px;
 }
 
 .middle1 {
@@ -42,7 +56,7 @@
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -53,7 +67,7 @@
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 80%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

@@ -1,10 +1,16 @@
 export interface Project {
 	image: string;
 	altText: string;
+	title: string;
 	description: string;
 	githubUrl?: string;
 	siteUrl?: string;
 	comingSoon?: boolean;
+	language: string;
+  framework: string;
+  stateManagement: string;
+  designTools: string;
+  testingTools: string;
 };
 
 export type Projects = Project[];
@@ -22,7 +28,7 @@ export type TechnicalSkills = string[];
 export interface CodeSample {
 	appName: string;
   appDescription: string;
-  herokuLink: string;
+  siteUrl?: string;
   githubLink: string;
 };
 
@@ -50,3 +56,8 @@ export type USState =
 	'OK' | 'OR' | 'PA'  | 'RI' | 'SC' |
 	'SD' | 'TN' | 'TX'  | 'UT' | 'VT' |
 	'VA' | 'WA' | 'WV'  | 'WI' | 'WY';
+
+
+export interface PortfolioContextType {
+  projects: Projects
+}

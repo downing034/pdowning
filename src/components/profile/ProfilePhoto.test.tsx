@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ProfilePhoto } from './';
+import ProfilePhoto from './ProfilePhoto';
 
 describe('ProfilePhoto', () => {
   test('renders ProfilePhoto', () => {

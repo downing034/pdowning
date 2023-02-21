@@ -15,13 +15,7 @@ const CodeSamples = () => {
       <PaddingContainer>
         {
           CODE_SAMPLES.map((sample, index) => 
-            <CodeSampleItem
-              key={index}
-              appName={sample.appName}
-              appDescription={sample.appDescription}
-              herokuLink={sample.herokuLink}
-              githubLink={sample.githubLink}
-            />
+            <CodeSampleItem key={index} sample={sample} />
           )
         }
       </PaddingContainer>

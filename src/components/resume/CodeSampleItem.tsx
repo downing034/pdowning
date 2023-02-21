@@ -1,14 +1,25 @@
 import React from 'react';
 import { CodeSample } from 'constants/types';
 
-const CodeSampleItem = ({ appName, appDescription, herokuLink, githubLink }: CodeSample) => {
+export interface CodeSampleItemProps {
+  sample: CodeSample;
+};
+
+const CodeSampleItem = ({ sample }: CodeSampleItemProps) => {
+    const { appName, appDescription, siteUrl, githubLink } = sample;
+
   return (
     <p>
       <strong>{appName}</strong> – {appDescription}
       <br/>
-      Heroku:
-      <a id="sample-heroku-link" target="_blank" href={herokuLink}> {herokuLink}</a>
-      <br/>
+      { siteUrl &&
+        <>
+          Heroku:
+          <a id="sample-site-url" target="_blank" href={siteUrl}> {siteUrl}</a>
+          <br/>
+        </>
+      }
+      
       Github:
       <a id="sample-github-link" target="_blank" href={githubLink}> {githubLink}</a>
     </p>
