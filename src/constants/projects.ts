@@ -13,7 +13,7 @@ export const ACTIVE_PROJECTS: Projects = [
 	{
 		image: LogoTransparent,
 		altText: "Site Logo",
-    title: "This Portfolio Site",
+    title: "This Site",
     description: "This. Very. Site.",
     githubUrl: "https://github.com/downing034/pdowning",
     siteUrl: "https://home.pdowning.com",
