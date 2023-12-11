@@ -9,6 +9,6 @@ describe('SectionHeading', () => {
     let wrapper = shallow(<SectionHeading {...props} />)
     expect(wrapper).toHaveLength(1)
     expect(wrapper).toHaveClassName('text-center strong')
-    expect(wrapper).toHaveText('DENNIS System')
+    expect(wrapper.text()).toBe('DENNIS System')
   });
 });

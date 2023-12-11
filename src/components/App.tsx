@@ -2,6 +2,7 @@ import React from 'react';
 import 'styles/app.css';
 
 import { About } from './about';
+import { Abilities } from './abilities';
 import { Contact } from './contact';
 import { Portfolio } from './portfolio';
 import { Resume } from './resume';
@@ -16,6 +17,7 @@ const App = () => {
       </div>
       <About />
       <Portfolio />
+      <Abilities />
       <Resume />
       <Contact />
     </div>

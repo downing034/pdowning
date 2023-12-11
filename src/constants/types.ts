@@ -23,6 +23,13 @@ export interface Job {
 
 export type Jobs = Job[];
 
+export interface Ability {
+	name: string;
+	skillLevel: number;
+};
+
+export type Abilities = Ability[];
+
 export type TechnicalSkills = string[];
 
 export interface CodeSample {

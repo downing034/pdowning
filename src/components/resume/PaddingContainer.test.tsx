@@ -14,6 +14,6 @@ describe('PaddingContainer', () => {
 
     let li = wrapper.find('li')
     expect(li).toHaveLength(1)
-    expect(li).toHaveText('one')
+    expect(li.text()).toBe('one')
   });
 });

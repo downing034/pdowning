@@ -17,9 +17,9 @@ describe('CodeSampleItem', () => {
     let wrapper = shallow(<CodeSampleItem {...props} />)
 
     let name = wrapper.find('strong')
-    expect(name).toHaveText('Charlie Work')
+    expect(name.text()).toBe('Charlie Work')
 
-    expect(wrapper).toHaveText('Charlie Work – Site for dirty jobsHeroku: charlie.work.eduGithub: github.charlie.work.com')
+    expect(wrapper.text()).toBe('Charlie Work – Site for dirty jobsHeroku: charlie.work.eduGithub: github.charlie.work.com')
 
     let herokuLink = wrapper.find('a#sample-site-url')
     expect(herokuLink).toHaveProp('href', 'charlie.work.edu')

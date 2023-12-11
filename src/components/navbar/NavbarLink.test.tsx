@@ -15,6 +15,6 @@ describe('NavbarLink', () => {
 
     let link = wrapper.find('a')
     expect(link).toHaveProp('href', 'wolfcola/bark')
-    expect(link).toHaveText('wolfcola')
+    expect(link.text()).toBe('wolfcola')
   });
 });
