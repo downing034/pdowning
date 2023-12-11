@@ -28,14 +28,14 @@ describe('PortfolioItem', () => {
 
     let middleDescription = wrapper.find('div.middle1')
     let subDiv = middleDescription.childAt(0)
-    expect(subDiv).toHaveText('it is a dog')
+    expect(subDiv.text()).toBe('it is a dog')
 
     let githubLink = wrapper.find('a#github')
     expect(githubLink).toHaveProp('href', 'github.example.com')
-    expect(githubLink).toHaveText('VIEW CODE')
+    expect(githubLink.text()).toBe('VIEW CODE')
 
     let siteLink = wrapper.find('a#site')
     expect(siteLink).toHaveProp('href', 'example.com')
-    expect(siteLink).toHaveText('VIEW SITE')
+    expect(siteLink.text()).toBe('VIEW SITE')
   });
 });

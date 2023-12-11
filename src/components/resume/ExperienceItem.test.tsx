@@ -12,7 +12,7 @@ describe('ExperienceItem', () => {
   test('renders ExperienceItem with job name and company name', () => {
     let wrapper = shallow(<ExperienceItem {...props} />)
     let experienceName = wrapper.find('h5')
-    expect(experienceName).toHaveText("Bartender – Paddy's Pub")
+    expect(experienceName.text()).toBe("Bartender – Paddy's Pub")
 
     let experienceList = wrapper.find('li')
     expect(experienceList).toHaveLength(3)
@@ -24,7 +24,7 @@ describe('ExperienceItem', () => {
 
     let wrapper = shallow(<ExperienceItem {...emptyCompanyProps} />)
     let experienceName = wrapper.find('h5')
-    expect(experienceName).toHaveText("Rat Basher")
+    expect(experienceName.text()).toBe("Rat Basher")
 
     let experienceList = wrapper.find('li')
     expect(experienceList).toHaveLength(3)

@@ -19,14 +19,14 @@ describe('EmploymentHistoryItem', () => {
     let jobCol = wrapper.find('div.col-md-7')
     let jobList = jobCol.childAt(0)
     let jobNameAndLocation = jobList.childAt(0)
-    expect(jobNameAndLocation).toHaveText("Paddy's Pub: Philadelphia, PA")
+    expect(jobNameAndLocation.text()).toBe("Paddy's Pub: Philadelphia, PA")
 
     let jobTitle = jobList.childAt(1)
-    expect(jobTitle).toHaveText('Bartender')
+    expect(jobTitle.text()).toBe('Bartender')
 
     let jobYearCol = wrapper.find('div.col-md-3')
     let jobYearList = jobYearCol.childAt(0)
     let jobYears = jobYearList.childAt(0)
-    expect(jobYears).toHaveText('2001 - 2013')
+    expect(jobYears.text()).toBe('2001 - 2013')
   });
 });
