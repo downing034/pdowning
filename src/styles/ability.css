@@ -1,0 +1,39 @@
+#main-ability-header {
+  margin-bottom: 100px;
+}
+
+.ability-header {
+  font-weight: bold;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.ability-name {
+  font-size: 1.0em;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.abilities-section-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ability-section-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.ability-section-item-container:hover small {
+  font-weight: bold;
+  color: black;
+  cursor: default;
+}
+
+div.ability-section-item-container:hover svg {
+  color: #FFC000;
+  border-color: #FFC000;
+}
