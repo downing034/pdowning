@@ -39,12 +39,17 @@
 
 .portfolio-title {
   background-color: #f0eff0; /* whitesmoke */
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 0px;
 }
 
 .project-details {
   background-color: #f0eff0; /* whitesmoke */
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: left;
+  padding-left: 20px;
 }
 
 .project-details p:last-child {

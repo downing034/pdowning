@@ -1,13 +1,13 @@
 import React from 'react';
 import 'styles/app.css';
 
-import { Button } from 'react-bootstrap';
 
 import { About } from './about';
 import { Contact } from './contact';
 import { Portfolio } from './portfolio';
 import { Resume } from './resume';
 import { Profile } from './profile';
+import { History } from './history';
 
 
 const App = () => {
@@ -19,6 +19,7 @@ const App = () => {
       </div>
       <About />
       <Portfolio />
+      <History />
       <Resume />
       <Contact />
     </div>
