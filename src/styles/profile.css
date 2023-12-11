@@ -1,6 +1,9 @@
 .box {
   flex:1;
   position: relative;
+}
+
+.box-background {
   background-color: black;
 }
 

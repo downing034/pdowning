@@ -1,4 +1,33 @@
+.section-header {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.section-description {
+  padding-top: 30px;
+  line-height: 38px;
+  text-align: center;
+}
+
 .potato {
-  width: 60%;
+  width: 100%;
   height: auto;
+}
+
+@media (min-width: 767px) {
+  .potato {
+    width: 72.75%;
+  }
+}
+
+@media (min-width: 992px) {
+  .potato {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .potato {
+    width: 66.49%;
+  }
 }
