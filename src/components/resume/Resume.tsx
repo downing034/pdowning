@@ -17,7 +17,7 @@ import {
 const Resume = () => {
   return (
     <ScrollableAnchor id={'resume'}>
-      <div className="white-container resume-container">
+      <div className="white-container">
         <div className="container">
           <div className="row">
             <div className="col-md-4 offset-4">

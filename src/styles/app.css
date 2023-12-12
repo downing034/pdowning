@@ -237,9 +237,9 @@ a.text {
 }
 
 .black-container {
-  height: 500px;
   width: 100%;
   padding-top: 100px;
+  padding-bottom: 50px;
   background-color: black; /* black */
   color: white;
 }
@@ -329,6 +329,25 @@ div.ability-section-item-container:hover svg {
   color: grey;
 }
 
+#contact-text {
+  padding: 40px;
+  padding-top: 0px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+};
+
+.contact-card-text {
+  text-align: center;
+}
+
+.contact-card-icon {
+  margin-bottom: 20px;
+}
+
 /* Media Breakpoints */
 @media (min-width: 300px) {
   .box-background {
@@ -374,6 +393,10 @@ div.ability-section-item-container:hover svg {
   .project-details-wrapper {
     margin: 35px;
     margin-top: 85px;
+  }
+
+  #contact-text {
+    padding: 0px 200px 50px 200px;
   }
 }
 
