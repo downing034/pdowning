@@ -1,6 +1,5 @@
 import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import 'styles/contact.css';
 
 import {
   LinkedIn,

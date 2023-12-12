@@ -1,5 +1,4 @@
 import React from 'react';
-import 'styles/about.css';
 import { PaulPhoto } from 'images';
 
 const ProfilePhoto = () => {
