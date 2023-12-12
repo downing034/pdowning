@@ -11,6 +11,7 @@ export const CODING_ABILITIES: Abilities = [
   { name: 'CSS/3 (+ SASS)', skillLevel: 4 },
   { name: 'Create React App', skillLevel: 5 },
   { name: 'Vite', skillLevel: 3 },
+  { name: 'Webpack', skillLevel: 4},
   { name: 'NodeJs / Express', skillLevel: 2 },
   { name: 'JSON / XML', skillLevel: 5 },
   { name: 'GIT', skillLevel: 4 },
@@ -19,13 +20,13 @@ export const CODING_ABILITIES: Abilities = [
   { name: 'Netlify', skillLevel: 4 },
   { name: 'Heroku', skillLevel: 3 },
   { name: 'AWS / Google Cloud', skillLevel: 1 },
-  { name: 'Docker', skillLevel: 1 }, 
+  { name: 'Docker', skillLevel: 2 }, 
 ];
 
 export const DESIGN_ABILITIES: Abilities = [
   { name: 'Material UI', skillLevel: 5 },
   { name: 'Bootstrap', skillLevel: 4 },
-  { name: 'Tailwind', skillLevel: 1 },
+  { name: 'Tailwind', skillLevel: 2 },
 ];
 
 export const TESTING_ABILITIES: Abilities = [

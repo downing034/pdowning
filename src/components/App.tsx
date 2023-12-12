@@ -11,7 +11,7 @@ import { Profile } from './profile';
 const App = () => {
   
   return (
-    <div className="App">
+    <div className="app">
       <div className="banner-image">
         <Profile />
       </div>

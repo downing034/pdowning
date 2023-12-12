@@ -1,7 +1,6 @@
 import React from 'react';
 import { Abilities } from 'constants/types';
 import Ability from './Ability';
-import 'styles/ability.css';
 
 export interface AbilitySectionProps {
   header: string;

@@ -1,6 +1,5 @@
 import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import 'styles/profile.css';
 import { Project } from 'constants/types';
 import { PortfolioItem } from './';
 import { ACTIVE_PROJECTS } from 'constants/index';
@@ -13,7 +12,7 @@ const Portfolio = () => {
       <ScrollableAnchor id={'portfolio'}>
         <div className="grey-container">
           <div className="container">
-            <h1>Active Projects</h1>
+            <h1 id="portfolio-header">Active Projects</h1>
             <div className="row">
               {
                 ACTIVE_PROJECTS.map((project, index) =>
