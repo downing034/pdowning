@@ -56,38 +56,57 @@
   margin-bottom: 0px;
 }
 
-.middle1 {
+.portfolio-item-hover-description {
   color: white;
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.middle2 {
+.portfolio-item-hover-view-code {
+  color: white;
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.box:hover .portfolio-icon {
+.portfolio-item-hover-view-site {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.box-background:hover .portfolio-icon {
   opacity: 0.1;
 }
 
-.box:hover .middle1 {
+/* TODO: React doesn't like it when I combine these classes
+         using comma separation.
+*/
+.box-background:hover .portfolio-item-hover-description {
   opacity: 1;
 }
 
-.box:hover .middle2 {
+.box-background:hover .portfolio-item-hover-view-code {
+  opacity: 1;
+}
+
+.box-background:hover .portfolio-item-hover-view-site {
   opacity: 1;
 }
 
@@ -247,6 +266,7 @@ a.text {
   flex-direction: column;
   margin-left: 0px;
   margin-right: 0px;
+  margin-top: 10px;
 }
 
 #main-ability-header {
@@ -344,7 +364,7 @@ div.ability-section-item-container:hover svg {
   }
 
   .box-background {
-    width: 48%
+    width: 82%
   }
   
   .portfolio-item-wrapper {
@@ -353,7 +373,7 @@ div.ability-section-item-container:hover svg {
 
   .project-details-wrapper {
     margin: 35px;
-    margin-top: 45px;
+    margin-top: 85px;
   }
 }
 
@@ -363,7 +383,7 @@ div.ability-section-item-container:hover svg {
   }
 
   .box-background {
-    width: 40%
+    width: 68%
   }
 
   .portfolio-item-wrapper {
