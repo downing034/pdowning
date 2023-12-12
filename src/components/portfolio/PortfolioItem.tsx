@@ -12,19 +12,21 @@ const PortfolioItem = ({ projectTitle }: PortfolioItemProps) => {
   return (
     <div className="portfolio-item-wrapper row">
       
-      <div className="col-md-12 col-lg-6">
+      <div className="col-md-12 col-lg-5">
         <div className="box-background">
           <h4 className="portfolio-title">{title}</h4>
           <img className="portfolio-icon" src={image} alt={altText}/>
 
-          <div className="middle1">
+          <div className="portfolio-item-hover-description">
             <div>{description}</div>
-            <br />
+          </div>
+
+          <div className="portfolio-item-hover-view-code">
             <a id="github" className="text" target="_blank" href={githubUrl}>VIEW CODE</a>
             
           </div>
 
-          <div className="middle2">
+          <div className="portfolio-item-hover-view-site">
 
             {comingSoon && <div className="soon-text">Coming soon...</div>}
 
@@ -34,7 +36,7 @@ const PortfolioItem = ({ projectTitle }: PortfolioItemProps) => {
         </div>
       </div>
       
-      <div className="profile-item-details col-lg-6">
+      <div className="profile-item-details col-lg-7">
         <PortfolioItemDetails projectTitle={title} />
       </div>
     </div>

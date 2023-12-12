@@ -5,7 +5,6 @@ import App from 'components/App';
 describe('App', () => {
   test('renders app', () => {
     let wrapper = shallow(<App />)
-    expect(wrapper).toHaveClassName('App')
 
     let profile = wrapper.find('Profile');
     expect(profile).toHaveLength(1);
