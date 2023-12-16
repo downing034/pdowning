@@ -27,6 +27,8 @@ export const DESIGN_ABILITIES: Abilities = [
   { name: 'Material UI', skillLevel: 5 },
   { name: 'Bootstrap', skillLevel: 4 },
   { name: 'Tailwind', skillLevel: 2 },
+  { name: 'Framer Motion', skillLevel: 2 },
+  { name: 'React Awesome Reveal', skillLevel: 2 },
 ];
 
 export const TESTING_ABILITIES: Abilities = [
