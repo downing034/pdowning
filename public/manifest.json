@@ -1,6 +1,6 @@
 {
   "short_name": "Paul Downing",
-  "name": "Paul Downing - Software Engineer",
+  "name": "Paul Downing - Senior Software Engineer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "background_color": "#000000"
 }
