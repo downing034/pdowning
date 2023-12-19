@@ -9,7 +9,7 @@ describe('Resume', () => {
     expect(wrapper).toHaveProp('id', 'resume')
 
     let downloadLink = wrapper.find('a#resume-download')
-    expect(downloadLink).toHaveProp('href', 'P_W_Downing_Resume_2023.pdf')
+    expect(downloadLink).toHaveProp('href', 'Paul_Downing_Resume.pdf')
     expect(downloadLink).toHaveProp('download')
 
     // resume components

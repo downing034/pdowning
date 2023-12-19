@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import 'styles/resume.css';
-import ResumeDownload from 'files/P_W_Downing_Resume_2023.pdf';
+import ResumeDownload from 'files/Paul_Downing_Resume.pdf';
 
 import {
   Awards,

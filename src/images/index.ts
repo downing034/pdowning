@@ -13,5 +13,8 @@ export { default as Punterest } from './punterest.jpg';
 export { default as QuizGame } from './quizGame.png';
 export { default as RocketLeague } from './rocketLeague.jpg';
 export { default as SportsBoard } from './sportsBoard.png';
+export { default as TvScreen } from './tvScreen.gif';
+export  { default as TvWallv2 } from './tvWall.png';
+export { default as TvWall } from './tvWall.jpg';
 export { default as TwitterApp } from './twitterApp.jpg';
 export { default as YelpDemo } from './yelpPhoto.jpg';
