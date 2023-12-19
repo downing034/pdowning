@@ -142,13 +142,24 @@ a.text {
   height: 300px;
 }
 
+.about-description-panel {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #999;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 17px;
+  max-height: 451px;
+}
+
 .section-header {
-  padding-top: 100px;
   text-align: center;
 }
 
 .section-description {
-  padding-top: 30px;
   line-height: 38px;
   text-align: center;
 }
@@ -177,14 +188,14 @@ a.text {
 .banner-image {
   background-image: url(../images/milkyway.jpg);
   background-color: #333F48;
-  height: 1000px;
+  height: 740px;
   background-size: cover;
 }
 
 .nameplate {
   color: white;
   font-size: 50px;
-  padding-top: 200px;
+  padding-top: 50px;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2.2px;
   word-spacing: -10px;
@@ -213,7 +224,7 @@ a.text {
   border: 2px solid #000000;
   width: 500px;
   height: auto;
-  margin-top: 75px;
+  margin-top: 25px;
   filter: grayscale(100%);
 }
 
@@ -259,6 +270,7 @@ a.text {
 .potato {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .project-details-wrapper {
@@ -348,11 +360,56 @@ div.ability-section-item-container:hover svg {
   margin-bottom: 20px;
 }
 
+.about-container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.main div {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in;
+}
+
+.slide-item-left {
+  transform: translateX(-150%);
+  opacity: 0;
+}
+
+.slide-item-right {
+  transform: translateX(150%);
+  opacity: 0;
+}
+
+.slide-in {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
 /* Media Breakpoints */
 @media (min-width: 300px) {
   .box-background {
     width: 90%;
     margin: auto;
+  }
+
+  .main {
+    height: 1000px;
+    flex-direction: column;
   }
 
   .project-details-wrapper {
@@ -363,6 +420,14 @@ div.ability-section-item-container:hover svg {
 
 @media (min-width: 767px) {
   .potato {
+    width: 72.75%;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  #about-text {
     width: 72.75%;
   }
 
@@ -379,6 +444,15 @@ div.ability-section-item-container:hover svg {
 
 @media (min-width: 992px) {
   .potato {
+    width: 80%;
+  }
+
+  .main {
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  #about-text {
     width: 80%;
   }
 
@@ -402,6 +476,15 @@ div.ability-section-item-container:hover svg {
 
 @media (min-width: 1200px) {
   .potato {
+    width: 66.49%;
+  }
+
+  .main {
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  #about-text {
     width: 66.49%;
   }
 
