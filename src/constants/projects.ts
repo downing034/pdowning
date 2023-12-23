@@ -20,7 +20,7 @@ export const ACTIVE_PROJECTS: Projects = [
     language: "Typescript, HTML5, CSS",
     framework: "React (using CRA), Webpack",
     stateManagement: 'Contexts',
-    designTools: "Bootstrap",
+    designTools: "Bootstrap and custom CSS",
     testingTools: "Jest, Enzyme",
 
 	},

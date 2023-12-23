@@ -35,18 +35,16 @@ const About = () => {
     <ScrollableAnchor id={'about'}>       
       <div className="about-container white-container">
         <div className="container">
-          <div className="row">
-            <div className="main" ref={ref}>
-              <div className="col-sm-12 col-lg-7 col-xl-7 slide-item-left">
-                <img className="potato" src={Potato} alt="dog" />
-              </div>
+          <div className="main" ref={ref}>
+            <div className="flex-grow-1 slide-item-left">
+              <img className="potato" src={Potato} alt="dog" />
+            </div>
 
-              <div className="col-sm-12 col-lg-5 col-xl-5 slide-item-right">
-                <div className="about-description-panel">
-                  <h1 className="section-header">About Me</h1>
-                  <p className="section-description">I work out of Denver, CO. I have a dog named Potato. I enjoy running, but hiking is better. Metal and Rock are my top Spotify genres. My favorite number is 34. I'm an avid cross-stitcher. I'm an occasional Rocket Leaguer.</p>                  
-                </div> 
-              </div>
+            <div className="flex-grow-1 slide-item-right">
+              <div className="about-description-panel">
+                <h1 id="about-me-section-header" className="text-center">About Me</h1>
+                <p className="section-description">I work out of Denver, CO. I have a dog named Potato. I enjoy running, but hiking is better. Metal and Rock are my top Spotify genres. My favorite number is 34. I'm an avid cross-stitcher. I'm an occasional Rocket Leaguer.</p>                  
+              </div> 
             </div>
             
           </div>

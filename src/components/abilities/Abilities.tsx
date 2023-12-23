@@ -14,7 +14,7 @@ const Abilities = () => {
     <ScrollableAnchor id={'abilities'}>
       <div className="white-container">
         <div className="container">
-          <h1 id="main-ability-header">Abilities</h1>
+          <h1 className="text-center" id="ability-section-header">Abilities</h1>
           <div className="row">
             <div className="col-md-5 offset-1">
               <AbilitySection header="Coding" abilities={CODING_ABILITIES} />
