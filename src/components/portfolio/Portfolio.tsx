@@ -12,7 +12,7 @@ const Portfolio = () => {
       <ScrollableAnchor id={'portfolio'}>
         <div className="grey-container">
           <div className="container">
-            <h1 id="portfolio-header">Active Projects</h1>
+            <h1 className="text-center">Active Projects</h1>
             <div className="row">
               {
                 ACTIVE_PROJECTS.map((project, index) =>

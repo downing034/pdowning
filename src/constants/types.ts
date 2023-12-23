@@ -15,9 +15,26 @@ export interface Project {
 
 export type Projects = Project[];
 
+export interface TechonologiesUsed {
+	languages: string;
+	frameWorks: string;
+	environment: string;
+	testingTechnologies: string;
+	otherTechnologies: string;
+}
+
+export type JobDate = Date | string;
+
 export interface Job {
 	title: string;
 	companyName: string;
+	location: string;
+	website?: string;
+	startDate: JobDate;
+	endDate: JobDate;
+	blurb: string;
+	description: string[];
+	technologiesUsed: TechonologiesUsed;
 	experienceList: string[];
 };
 

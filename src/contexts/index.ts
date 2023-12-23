@@ -3,3 +3,5 @@ export {
 	PortfolioContext,
 	newEmptyProject
 } from './PortfolioContextProvider';
+
+export * from './ModalContext';

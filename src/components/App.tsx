@@ -5,22 +5,25 @@ import { About } from './about';
 import { Abilities } from './abilities';
 import { Contact } from './contact';
 import { Portfolio } from './portfolio';
-import { Resume } from './resume';
 import { Profile } from './profile';
+import { WorkHistory } from './workHistory';
+import { ModalContextProvider } from 'contexts';
 
 const App = () => {
   
   return (
-    <div className="app">
-      <div className="banner-image">
-        <Profile />
+    <ModalContextProvider>
+      <div className="app">
+        <div className="banner-image">
+          <Profile />
+        </div>
+        <About />
+        <Portfolio />
+        <Abilities />
+        <WorkHistory />
+        <Contact />
       </div>
-      <About />
-      <Portfolio />
-      <Abilities />
-      <Resume />
-      <Contact />
-    </div>
+    </ModalContextProvider>
   );
 }
 

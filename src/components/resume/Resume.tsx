@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor'
-import 'styles/resume.css';
+// import 'styles/resume.css';
 import ResumeDownload from 'files/Paul_Downing_Resume.pdf';
 
 import {
