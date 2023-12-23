@@ -11,7 +11,7 @@ const Contact = () => {
 
   return (
     <ScrollableAnchor id={'contact'}>
-      <div className="black-container credits text-center">
+      <div className="dark-slate-container credits text-center">
         <div className="row">
           <div className="col-md-12 text-center" id="contact-text">
             <h3>Now that you know a little about me and my work, feel free to reach out

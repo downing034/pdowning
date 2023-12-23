@@ -2,6 +2,7 @@
   --yellow: #FFC000;
   --orange: #BF5700;
   --slate: #41516C;
+  --darkSlate: #1e2532;
   --whiteSmoke: #f0eff0;
   --mediumGray: #999;
 }
@@ -249,11 +250,11 @@ a.text {
   background-color: white; /* white */
 }
 
-.black-container {
+.dark-slate-container {
   width: 100%;
   padding-top: 100px;
   padding-bottom: 50px;
-  background-color: black; /* black */
+  background-color: var(--darkSlate);
   color: white;
 }
 
