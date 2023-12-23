@@ -1,25 +1,17 @@
 import React from 'react';
 import { mount } from "enzyme";
-import { PortfolioContext } from 'contexts';
 import { ACTIVE_PROJECTS } from 'constants/index';
-import { PortfolioContextType } from 'constants/types';
 import PortfolioItem, { PortfolioItemProps } from './PortfolioItem';
 
 describe('PortfolioItem', () => {
 
   let props: PortfolioItemProps = {
-    projectTitle: 'This Portfolio Site',
+    project: ACTIVE_PROJECTS[0],
   }
-
-  let data: PortfolioContextType = { projects: ACTIVE_PROJECTS }
 
   // todo: fix mount not playing well with typescript
   test.skip('renders PortfolioItem with site url and github url', () => {
-    let wrapper = mount(
-      <PortfolioContext.Provider value={data}>
-        <PortfolioItem {...props} />
-      </PortfolioContext.Provider>
-    )
+    let wrapper = mount(<PortfolioItem {...props} />);
 
     let icon = wrapper.find('img')
     expect(icon).toHaveClassName('portfolio-icon')

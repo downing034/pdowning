@@ -5,8 +5,6 @@ import { Portfolio } from 'components/portfolio';
 describe('Portfolio', () => {
   test('renders Portfolio', () => {
     let wrapper = shallow(<Portfolio />)
-    expect(wrapper).toHaveDisplayName('PortfolioContextProvider')
-
     let items = wrapper.find('PortfolioItem')
     expect(items).toHaveLength(3);
   });
