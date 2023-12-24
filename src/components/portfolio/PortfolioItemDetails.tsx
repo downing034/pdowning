@@ -1,16 +1,16 @@
 import React from 'react';
-import useProject from './useProject';
-
+import { Project } from 'constants/types';
 
 export interface PortfolioItemDetailsProps {
-  projectTitle: string;
+  project: Project;
 };
 
-const PortfolioItemDetails = ({projectTitle}: PortfolioItemDetailsProps) => {
-	const { language, framework, stateManagement, designTools, testingTools } = useProject(projectTitle);
+const PortfolioItemDetails = ({ project }: PortfolioItemDetailsProps) => {
+	const { title, language, framework, stateManagement, designTools, testingTools } = project;
 
 	return (
     <div className="project-details-wrapper">
+      <h4 className="portfolio-title">{title}</h4>
       <div className="project-details">
         <strong>Language(s):</strong>
         <p className="project-details-info">{language}</p>

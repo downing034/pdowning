@@ -1,20 +1,19 @@
 import React from 'react';
 import { Project } from 'constants/types';
-import useProject from './useProject';
 import PortfolioItemDetails from './PortfolioItemDetails';
 
 export interface PortfolioItemProps {
-  projectTitle: string;
+  project: Project;
 };
 
-const PortfolioItem = ({ projectTitle }: PortfolioItemProps) => {
-  const { image, altText, title, description, githubUrl, siteUrl, comingSoon } = useProject(projectTitle);
+const PortfolioItem = ({ project }: PortfolioItemProps) => {
+  const { image, altText, description, githubUrl, siteUrl, comingSoon } = project;
+  
   return (
     <div className="portfolio-item-wrapper row">
       
-      <div className="col-md-12 col-lg-5">
+      <div className="col-sm-12 col-md-12 col-lg-5">
         <div className="box-background">
-          <h4 className="portfolio-title">{title}</h4>
           <img className="portfolio-icon" src={image} alt={altText}/>
 
           <div className="portfolio-item-hover-description">
@@ -36,8 +35,8 @@ const PortfolioItem = ({ projectTitle }: PortfolioItemProps) => {
         </div>
       </div>
       
-      <div className="profile-item-details col-lg-7">
-        <PortfolioItemDetails projectTitle={title} />
+      <div className="profile-item-details col-sm-12 col-md-12 col-lg-7">
+        <PortfolioItemDetails project={project} />
       </div>
     </div>
   )
