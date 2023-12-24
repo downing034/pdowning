@@ -188,7 +188,7 @@ a.text {
 }
 
 .section-description {
-  line-height: 38px;
+  line-height: 1.5;
   text-align: center;
 }
 
@@ -216,7 +216,7 @@ a.text {
 .banner-image {
   background-image: url(../images/milkyway.jpg);
   background-color: #333F48;
-  height: 740px;
+  height: 525px;
   background-size: cover;
   width: 100%;
   position: fixed;
@@ -240,7 +240,7 @@ a.text {
 
 .subplate-text {
   color: white;
-  font-size: 20px;
+  font-size: 12px;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2.2px;
   word-spacing: 0px;
@@ -254,7 +254,7 @@ a.text {
 .profile-photo {
   border-radius: 50%;
   border: 2px solid #000000;
-  width: 500px;
+  width: 250px;
   height: auto;
   margin-top: 25px;
   filter: grayscale(100%);
@@ -298,24 +298,14 @@ a.text {
 
 .portfolio-item-wrapper {
   margin-top: 50px;
-}
-
-div.portfolio-item-wrapper:first-child {
-  transition: all .75s ease-in;
-}
-
-div.portfolio-item-wrapper {
-  transition: all 1s ease-in;
-}
-
-div.portfolio-item-wrapper:last-child {
-  transition: all 1.5s ease-in;
+  align-items: center;
 }
 
 .potato {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  max-height: 475px;
 }
 
 .project-details-wrapper {
@@ -440,6 +430,8 @@ div.ability-section-item-container:hover svg {
 .main div {
   flex: 1;
   height: 100%;
+  max-height: 475px;
+  max-width: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -447,13 +439,13 @@ div.ability-section-item-container:hover svg {
 }
 
 .slide-item-left {
-  transform: translateX(-150%);
-  opacity: 0;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .slide-item-right {
-  transform: translateX(150%);
-  opacity: 0;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .slide-in {
@@ -766,9 +758,33 @@ div.ability-section-item-container:hover svg {
   }
 }
 
+@media (min-width: 600px) {
+  .slide-item-left {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+
+  .slide-item-right {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+
+  .section-description {
+    line-height: 38px;
+  }
+}
+
 @media (min-width: 767px) {
-  .potato {
-    width: 72.75%;
+  .subplate-text {
+    font-size: 20px;
+  }
+
+  .profile-photo {
+    width: 500px;
+  }
+
+  .banner-image {
+    height: 740px;
   }
 
   .main {
@@ -808,10 +824,6 @@ div.ability-section-item-container:hover svg {
 }
 
 @media (min-width: 992px) {
-  .potato {
-    width: 80%;
-  }
-
   .main {
     height: 100vh;
     flex-direction: row;
@@ -879,9 +891,6 @@ div.ability-section-item-container:hover svg {
 }
 
 @media (min-width: 1200px) {
-  .potato {
-    width: 66.49%;
-  }
 
   .main {
     height: 80vh;
