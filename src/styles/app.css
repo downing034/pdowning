@@ -30,14 +30,26 @@
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
+  border-radius: 10px;
 /*  filter: grayscale(100%);*/
 }
 
 .portfolio-title {
-  background-color: var(--whiteSmoke);
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
+  border: 2px solid var(--slate);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   margin-bottom: 0px;
+  color: white;
+}
+
+.profile-item-details {
+  background-color: var(--slate);
+  border-radius: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 #about-me-section-header {
@@ -48,7 +60,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+}
+
+.project-details:first-of-type {
+  padding-top: 20px;
+}
+
+.project-details:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.project-details p:first-child {
+  padding-top: 30px;
 }
 
 .project-details p:last-child {
@@ -64,7 +93,7 @@
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -264,10 +293,23 @@ a.text {
 
 .box-background {
   background-color: black;
+  border-radius: 10px;
 }
 
 .portfolio-item-wrapper {
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+div.portfolio-item-wrapper:first-child {
+  transition: all .75s ease-in;
+}
+
+div.portfolio-item-wrapper {
+  transition: all 1s ease-in;
+}
+
+div.portfolio-item-wrapper:last-child {
+  transition: all 1.5s ease-in;
 }
 
 .potato {
@@ -279,9 +321,7 @@ a.text {
 .project-details-wrapper {
   display: flex;
   flex-direction: column;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 #ability-section-header {
@@ -403,7 +443,7 @@ div.ability-section-item-container:hover svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
 }
 
 .slide-item-left {
@@ -418,6 +458,16 @@ div.ability-section-item-container:hover svg {
 
 .slide-in {
   transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+.slide-item-from-bottom {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-up {
+  transform: translateY(0) !important;
   opacity: 1 !important;
 }
 
@@ -709,9 +759,10 @@ div.ability-section-item-container:hover svg {
     flex-direction: column;
   }
 
-  .project-details-wrapper {
-    margin-left: 35px;
-    margin-right: 35px;
+  .profile-item-details {
+    max-width: 432px;
+    margin: auto;
+    margin-top: 25px;
   }
 }
 
@@ -732,10 +783,10 @@ div.ability-section-item-container:hover svg {
     width: 65.45%;
     margin: auto;
   }
-  
-  .project-details-wrapper {
-    margin-left: 120px;
-    margin-right: 120px;
+
+  .profile-item-details {
+    margin: auto;
+    margin-top: 25px;
   }
 
   .main-modal {
@@ -773,14 +824,14 @@ div.ability-section-item-container:hover svg {
   .box-background {
     width: 82%
   }
-  
-  .portfolio-item-wrapper {
+
+  .profile-item-details {
     margin-top: 0px;
+    max-width: 100%;
   }
 
   .project-details-wrapper {
-    margin: 35px;
-    margin-top: 85px;
+    margin-top: 0px;
   }
 
   #contact-text {
@@ -843,10 +894,6 @@ div.ability-section-item-container:hover svg {
 
   .box-background {
     width: 68%
-  }
-
-  .portfolio-item-wrapper {
-    margin-top: 0px;
   }
 
   .modal-dialog {

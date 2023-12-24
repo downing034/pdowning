@@ -6,10 +6,11 @@ export interface PortfolioItemDetailsProps {
 };
 
 const PortfolioItemDetails = ({ project }: PortfolioItemDetailsProps) => {
-	const { language, framework, stateManagement, designTools, testingTools } = project;
+	const { title, language, framework, stateManagement, designTools, testingTools } = project;
 
 	return (
     <div className="project-details-wrapper">
+      <h4 className="portfolio-title">{title}</h4>
       <div className="project-details">
         <strong>Language(s):</strong>
         <p className="project-details-info">{language}</p>
