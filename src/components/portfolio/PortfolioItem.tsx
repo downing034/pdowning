@@ -10,9 +10,9 @@ const PortfolioItem = ({ project }: PortfolioItemProps) => {
   const { image, altText, description, githubUrl, siteUrl, comingSoon } = project;
   
   return (
-    <div className="portfolio-item-wrapper row">
+    <div className="portfolio-item-wrapper">
       
-      <div className="col-sm-12 col-md-12 col-lg-5">
+      <div className="portfolio-icon-container">
         <div className="box-background">
           <img className="portfolio-icon" src={image} alt={altText}/>
 
@@ -35,7 +35,7 @@ const PortfolioItem = ({ project }: PortfolioItemProps) => {
         </div>
       </div>
       
-      <div className="profile-item-details col-sm-12 col-md-12 col-lg-7">
+      <div className="profile-item-details">
         <PortfolioItemDetails project={project} />
       </div>
     </div>

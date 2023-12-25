@@ -14,9 +14,7 @@ const App = () => {
   return (
     <ModalContextProvider>
       <div className="app">
-        <div className="banner-image">
-          <Profile />
-        </div>
+        <Profile />
         <About />
         <Portfolio />
         <Abilities />

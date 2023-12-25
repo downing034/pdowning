@@ -28,7 +28,7 @@ export const ACTIVE_PROJECTS: Projects = [
 		image: QuizGame,
 		altText: "Quiz Game",
 		title: "Quiz Game",
-    description: "Simple, single board of America's favorite answer-and-question game",
+    description: "America's favorite answer-and-question game",
     comingSoon: true,
     githubUrl: "https://github.com/downing034/quiz-game",
     // siteUrl: "https://quiz.pdowning.com",
