@@ -24,8 +24,9 @@
 /* all images should be 400px by 400px */
 /* https://resizeimage.net/ */
 .portfolio-icon {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  max-width: 250px;
   opacity: 1;
   display: block;
   transition: .5s ease;
@@ -58,9 +59,10 @@
 
 .project-details {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding: 10px;
+  padding: 7px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: white;
@@ -98,6 +100,7 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  width: 75%;
 }
 
 .portfolio-item-hover-view-code {
@@ -110,9 +113,12 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  text-wrap: nowrap;
+  min-width: 36px;
 }
 
 .portfolio-item-hover-view-site {
+  
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -121,6 +127,7 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  text-wrap: nowrap;
 }
 
 .box-background:hover .portfolio-icon {
@@ -158,6 +165,7 @@
 
 a.text {
   text-decoration: none;
+  min-width: 36px;
 }
 
 .soon-text {
@@ -165,9 +173,11 @@ a.text {
   border: 2px solid white;
   color: white;
   font-size: 12px;
-  padding: 7px 21px;
+  padding: 7px 19px;
   letter-spacing: 2px;
   cursor: default;
+  text-wrap: nowrap;
+  min-width: 36px;
 }
 
 .spacer {
@@ -213,15 +223,14 @@ a.text {
   color: #BF5700;
 }
 
-.banner-image {
+.app {
   background-image: url(../images/milkyway.jpg);
   background-color: #333F48;
-  height: 525px;
+  background-attachment: fixed;
   background-size: cover;
   width: 100%;
-  position: fixed;
-  top: 0%;
-  z-index: -10;
+  height: auto;
+  max-height: 600px;
 }
 
 .nameplate {
@@ -257,6 +266,7 @@ a.text {
   width: 250px;
   height: auto;
   margin-top: 25px;
+  margin-bottom: 50px;
   filter: grayscale(100%);
 }
 
@@ -267,8 +277,7 @@ a.text {
 
 .grey-container {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px;
   background-color: #f0eff0; /* whitesmoke */
 }
 
@@ -294,10 +303,25 @@ a.text {
 .box-background {
   background-color: black;
   border-radius: 10px;
+  width: 100%;
+  position: relative;
 }
 
 .portfolio-item-wrapper {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-item-wrapper:first-of-type {
   margin-top: 50px;
+}
+
+.portfolio-item-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -312,6 +336,7 @@ a.text {
   display: flex;
   flex-direction: column;
   margin-top: 0px;
+  text-align: center;
 }
 
 #ability-section-header {
@@ -413,7 +438,6 @@ div.ability-section-item-container:hover svg {
   width: 100%;
   height: 100%;
   background: #fff;
-  margin-top: 740px;
   padding-bottom: 50px;
 }
 
@@ -566,8 +590,8 @@ div.ability-section-item-container:hover svg {
   text-align: center;
 
   color: white;
-  font-size: 1.25rem;
-  font-weight: 550;
+  font-size: 0.8rem;
+  font-weight: 450;
 
   display: grid;
   place-content: center;
@@ -739,22 +763,20 @@ div.ability-section-item-container:hover svg {
   border-radius: .5em;
 }
 
+.portfolio-icon-container {
+  flex-grow: 1;
+}
+
 /* Media Breakpoints */
 @media (min-width: 300px) {
-  .box-background {
-    width: 90%;
-    margin: auto;
-  }
-
   .main {
     height: 1000px;
     flex-direction: column;
   }
 
   .profile-item-details {
-    max-width: 432px;
-    margin: auto;
     margin-top: 25px;
+    width: 100%
   }
 }
 
@@ -772,6 +794,30 @@ div.ability-section-item-container:hover svg {
   .section-description {
     line-height: 38px;
   }
+
+  #work-history ul li .date {
+    font-size: 1.25rem;
+    font-weight: 550;
+  }
+
+  .project-details {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .box-background {
+    max-width: 400px;
+  }
+
+  .portfolio-icon {
+    max-width: 400px;
+  }
+
+  .app {
+    height: auto;
+    max-height: 900px;
+  }
 }
 
 @media (min-width: 767px) {
@@ -783,10 +829,6 @@ div.ability-section-item-container:hover svg {
     width: 500px;
   }
 
-  .banner-image {
-    height: 740px;
-  }
-
   .main {
     flex-direction: column;
   }
@@ -795,14 +837,18 @@ div.ability-section-item-container:hover svg {
     width: 72.75%;
   }
 
-  .box-background {
-    width: 65.45%;
-    margin: auto;
+  .portfolio-item-hover-description {
+    width: 75%;
   }
 
   .profile-item-details {
-    margin: auto;
-    margin-top: 25px;
+    margin-top: 0px;
+    margin-left: 15px;
+    min-width: 400px;
+  }
+
+  .portfolio-icon {
+    max-height: 268px;
   }
 
   .main-modal {
@@ -821,6 +867,13 @@ div.ability-section-item-container:hover svg {
   .modal-dialog {
     max-width: 600px;
   }
+
+  .portfolio-item-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-height: 300px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -832,18 +885,9 @@ div.ability-section-item-container:hover svg {
   #about-text {
     width: 80%;
   }
-
-  .box-background {
-    width: 82%
-  }
-
-  .profile-item-details {
-    margin-top: 0px;
-    max-width: 100%;
-  }
-
   .project-details-wrapper {
     margin-top: 0px;
+    text-align: inherit;
   }
 
   #contact-text {
@@ -888,6 +932,11 @@ div.ability-section-item-container:hover svg {
   .about-description-panel {
     max-height: 415px;
   }
+
+  .profile-item-details {
+    margin-left: 50px;
+    min-width: 500px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -901,15 +950,16 @@ div.ability-section-item-container:hover svg {
     width: 66.49%;
   }
 
-  .box-background {
-    width: 68%
-  }
-
   .modal-dialog {
     max-width: 700px;
   }
 
   .about-description-panel {
     max-height: 425px;
+  }
+
+  .profile-item-details {
+    margin-left: 75px;
+    min-width: 600px;
   }
 };

@@ -11,17 +11,17 @@ const Contact = () => {
 
   return (
     <ScrollableAnchor id={'contact'}>
-      <div className="dark-slate-container credits text-center">
+      <div className="dark-slate-container text-center">
         <div className="row">
+
           <div className="col-md-12 text-center" id="contact-text">
             <h3>Now that you know a little about me and my work, feel free to reach out
               and start a conversation on what I can do for you.
             </h3>
           </div>
-        </div>
-        <div className="row">
+        
 
-          <div className="col-sm-6 col-md-4 offset-md-2">
+          <div className="col-12 col-sm-6 col-md-4 offset-md-2">
             <div className="contact-card">
               <a
                 className="contact-card-icon"
@@ -35,7 +35,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="col-sm-6 col-md-4">
+          <div className="col-12 col-sm-6 col-md-4">
             <div className="contact-card">
               <a
                 id="email-link"
@@ -49,17 +49,15 @@ const Contact = () => {
               <div className="contact-card-text">downing034@gmail.com</div>
             </div>
           </div>
-
-        </div>
-
-
-
-        <div className="row">
-          <div id="copywrite" className="col-6 offset-3">
+        
+          <div id="copywrite" className="col-lg-12">
             © 2023 Paul Downing. All rights reserved.
           </div>
+        
         </div>
       </div>
+        
+      
     </ScrollableAnchor>
   )
 };
