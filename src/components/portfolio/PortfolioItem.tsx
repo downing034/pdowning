@@ -9,6 +9,13 @@ export interface PortfolioItemProps {
 const PortfolioItem = ({ project }: PortfolioItemProps) => {
   const { image, altText, description, githubUrl, siteUrl, comingSoon } = project;
   
+
+  // TODO:
+  /*
+    There is a bug here on actual mobile devices where the images are stretched
+    Likely cause is height getting set to "auto" or "100%". Images work in mobile
+    inspect tool and at other device widths
+  */
   return (
     <div className="portfolio-item-wrapper">
       
