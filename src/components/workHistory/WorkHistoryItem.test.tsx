@@ -1,9 +1,12 @@
 import React from 'react';
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { Job, TechonologiesUsed } from 'constants/index';
 import WorkHistoryItem, { WorkHistoryItemProps } from './WorkHistoryItem';
+import { ModalContextProvider } from 'contexts/ModalContext';
 
 describe('Profile', () => {
+
+  let openModal: () => void;
 
   let mocktechnologies: TechonologiesUsed = {
     languages: 'Typescript',
@@ -30,6 +33,10 @@ describe('Profile', () => {
     activeJob: true,
   };
 
+  beforeEach(() => {
+    openModal = jest.fn();
+  })
+
   test('renders WorkHistoryItem with active classes', () => {
     let wrapper = shallow(<WorkHistoryItem {...props} />)
     expect(wrapper).toHaveClassName('.current-item')
@@ -43,11 +50,6 @@ describe('Profile', () => {
 
     let jobDescription = wrapper.find('.descr')
     expect(jobDescription.text()).toBe('I do cool stuff here')
-
-    let modalButton = wrapper.find('button')
-    modalButton.simulate('click');
-
-    // todo finish modal open assertions with mount instead of shallow
   });
 
   test('renders WorkHistoryItem with past job classes', () => {
@@ -59,5 +61,21 @@ describe('Profile', () => {
     let date = wrapper.find('.date')
     expect(date).toHaveClassName('date-past')
     expect(date.text()).toBe('DEC 2023 - JAN 2024')
+  });
+
+  test.skip('onClick triggers correct "close" callback', () => {
+    let wrapper = mount(
+      <ModalContextProvider>
+        <WorkHistoryItem {...props} />
+      </ModalContextProvider>
+    )
+
+    expect(openModal).toHaveBeenCalledTimes(0)
+    let modalButton = wrapper.find('button')
+    modalButton.simulate('click');
+
+    expect(openModal).toHaveBeenCalledTimes(1)
+
+    // todo finish modal open assertions with mount instead of shallow
   });
 });
