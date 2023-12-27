@@ -420,6 +420,10 @@ div.ability-section-item-container:hover svg {
   padding-top: 0px;
 }
 
+.contact-container {
+  margin: 0px;
+}
+
 .contact-card {
   display: flex;
   flex-direction: column;

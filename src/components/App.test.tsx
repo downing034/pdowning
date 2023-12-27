@@ -15,8 +15,8 @@ describe('App', () => {
     let portfolio = wrapper.find('Portfolio');
     expect(portfolio).toHaveLength(1);
 
-    let resume = wrapper.find('Resume');
-    expect(resume).toHaveLength(1);
+    let workHistory = wrapper.find('WorkHistory');
+    expect(workHistory).toHaveLength(1);
 
     let contact = wrapper.find('Contact');
     expect(contact).toHaveLength(1);

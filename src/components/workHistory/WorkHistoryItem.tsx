@@ -6,10 +6,10 @@ import ExpandedHistoryModal from './ExpandedHistoryModal';
 
 export interface WorkHistoryItemProps {
   job: Job;
-  isFirstItem: boolean;
+  activeJob: boolean;
 };
 
-export const WorkHistoryItem = ({ job, isFirstItem }: WorkHistoryItemProps) => {
+export const WorkHistoryItem = ({ job, activeJob }: WorkHistoryItemProps) => {
   const { openModal } = useModalLauncher();
   const includeDay = false;
   const capitalize = true;
@@ -17,8 +17,8 @@ export const WorkHistoryItem = ({ job, isFirstItem }: WorkHistoryItemProps) => {
   const formattedEndDate = formatJobDate(job.endDate, 'short', includeDay, capitalize);
 
   return (
-    <li className={isFirstItem ? 'current-item' : 'past-item'}>
-      <div className={`date ${isFirstItem ? 'date-current' : 'date-past'}`}>{`${formattedStartDate} - ${formattedEndDate}`}</div>
+    <li className={activeJob ? 'current-item' : 'past-item'}>
+      <div className={`date ${activeJob ? 'date-current' : 'date-past'}`}>{`${formattedStartDate} - ${formattedEndDate}`}</div>
       <button className="modal-button" onClick={() => openModal(<ExpandedHistoryModal job={job}/>)}>
         <div className="title text-left">{`${job.title} @ ${job.companyName}`}</div>
         <div className="descr text-left">{job.blurb}</div>

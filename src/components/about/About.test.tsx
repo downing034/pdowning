@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { About } from './';
 
 describe('about', () => {
+
   test('renders about with anchor point', () => {
     let wrapper = shallow(<About />)
     expect(wrapper).toHaveDisplayName('ScrollableAnchor')
@@ -11,5 +12,8 @@ describe('about', () => {
     let dogPhoto = wrapper.find('img')
     expect(dogPhoto).toHaveClassName('potato')
     expect(dogPhoto).toHaveProp('src', 'potato.jpg')
+
+    let aboutHeader =  wrapper.find('#about-me-section-header');
+    expect(aboutHeader).toHaveText('About Me');
   });
 });
