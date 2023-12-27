@@ -1,3 +1,4 @@
+export * from './types';
 import { CODE_SAMPLES } from './code-samples';
 
 import { EMPLOYMENT_HISTORY } from './employment-history';

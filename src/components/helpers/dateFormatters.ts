@@ -1,8 +1,8 @@
-import { JobDate } from 'constants/types';
+import { JobDate, MonthFormat } from 'constants/types';
 
-export const showMonthAndYear = (date: Date, length: 'short' | 'long', includeDay: boolean) => {
+export const showMonthAndYear = (date: Date, monthLength: MonthFormat, includeDay: boolean) => {
   let opts: any = {
-    month: 'long',
+    month: monthLength,
     year: 'numeric',
   };
   if (includeDay) {
@@ -12,7 +12,7 @@ export const showMonthAndYear = (date: Date, length: 'short' | 'long', includeDa
   return date.toLocaleDateString('en-us', opts);
 };
 
-export const formatJobDate = (date: JobDate, length: 'short' | 'long', includeDay = false, capitalize = false) => {
-  const dateString = date instanceof Date ? showMonthAndYear(date, length, includeDay) : date;
+export const formatJobDate = (date: JobDate, monthLength: MonthFormat, includeDay = false, capitalize = false) => {
+  const dateString = date instanceof Date ? showMonthAndYear(date, monthLength, includeDay) : date;
   return capitalize ? dateString.toUpperCase() : dateString;
 }

@@ -32,7 +32,7 @@ const WorkHistory = () => {
           <ul className="history-timeline">
             {
               JOBS.map((job, index) =>
-                <WorkHistoryItem key={index} job={job} isFirstItem={index === 0}/>
+                <WorkHistoryItem key={index} job={job} activeJob={index === 0 }/>
               )
             }
           </ul>

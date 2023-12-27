@@ -80,3 +80,5 @@ export type USState =
 	'OK' | 'OR' | 'PA'  | 'RI' | 'SC' |
 	'SD' | 'TN' | 'TX'  | 'UT' | 'VT' |
 	'VA' | 'WA' | 'WV'  | 'WI' | 'WY';
+
+export type MonthFormat = 'short' | 'long';
