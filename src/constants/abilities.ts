@@ -44,6 +44,7 @@ export const TESTING_ABILITIES: Abilities = [
 
 export const TOOLS_ABILITIES: Abilities = [
   { name: 'Apple / MacOS', skillLevel: 5 },
+  { name: 'Object Oriented Programming', skillLevel: 5 },
   { name: 'Figma', skillLevel: 2 },
   { name: 'Jira / Atlassian', skillLevel: 4 },
   { name: 'Shortcut', skillLevel: 4 },
