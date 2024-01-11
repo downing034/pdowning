@@ -7,7 +7,8 @@ const Profile = () => {
 	return (
 		<div className="text-center">
       <h1 className="nameplate">Paul Downing</h1>
-      <p className="subplate-text">{dash}{dash} Sr. Software Engineer II {dash}{dash}</p>
+      <p className="subplate-text">{dash}{dash} Software Engineering Manager {dash}{dash}</p>
+      <p className="subplate-text">{dash}{dash} Senior Software Engineer II {dash}{dash}</p>
       <ProfilePhoto />
 		</div>
 	)
