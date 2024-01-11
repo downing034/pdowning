@@ -9,11 +9,11 @@ export const KAVA_LABS_SOFTWARE_ENGINEERING_MANAGER: Job = {
   website: 'https://app.kava.io',
   startDate: new Date('10/01/2023'),
   endDate: 'Current',
-  blurb: 'As the Application Team Engineering Manager, I manage and mentor a team of three mid-level engineers. I also work with other product team leaders to plan, manage, and coordinate work and I am still a code contrbutor.',
+  blurb: "As an Engineering Manager, I manage a team of three developers, providing task management, roadmap definition, and development guidance. I've improved product workflows and helped the product organization better understand our users through A/B testing and Google Analytics.",
   description: [
-    "As the Application Team Engineering Manager, I manage and mentor a team of three mid-level engineers. I am responsible for handling 1:1 meetings, fostering career growth, and finding ways to enhance team processes.",
-    "I also work with other product and engineering team leaders to plan, manage, and coordinate work or releases.",
-    "While doing these management duties, I am also remaining a part time indvidual contributor to the team, filling in as team needs arise and architecting new feature work."
+    "As an Engineering Manager, I manage a team of three developers, providing task management, roadmap definition, and development guidance. I've spent time improving product workflows and opening lines of communication between engineers and other departments.",
+    "To help shorten cycle time for bugs, I created a bug workflow process which included user impact and severity assessment. This process included a bi-weekly on-call handoff meeting and created clear ownership of bug tasks.",
+    "I helped implement a CI/CD pipeline that ensured each of our tests suites were run prior to deployment resulting in a direct reduction of regressions.",
   ],
   technologiesUsed: {
     languages: 'Typescript',
@@ -23,10 +23,12 @@ export const KAVA_LABS_SOFTWARE_ENGINEERING_MANAGER: Job = {
     otherTechnologies: 'Github, Netlify, Figma, Material-UI, Webpack'
   },
   experienceList: [
-    'Cultivated partnerships between engineering, product and UX personnel to create holistically designed final products.',
-    'Drove high-level strategic planning of development efforts across multiple projects to optimize resource utilization and shorten development times.',
-    'Provided regular feedback to both junior engineers and senior leadership on individual performance metrics and observations including conducting 1:1s and performance reviews.',
-    'Continued work as a Senior Software Engineer II in addition to management duties.',
+    "Implemented a CI/CD pipeline that ensured each of our tests suites were run prior to deployment and reduced cycle time and regressions",
+    "Collaborated with designers, developers, and business development to ensure delivered products meet requirements",
+    'Cultivated partnerships between engineering, product and UX personnel to create holistically designed final products',
+    'Drove high-level strategic planning of development efforts across multiple projects to optimize resource utilization and shorten development times',
+    'Provided regular feedback to both junior engineers and senior leadership on individual performance metrics and observations including conducting 1:1s and performance reviews',
+    'Continued work as a Senior Software Engineer II in addition to management duties',
   ],
 };
 
@@ -37,11 +39,11 @@ export const KAVA_LABS_SR_SOFTWARE_ENGINEER: Job = {
   website: 'https://app.kava.io',
   startDate: new Date('10/15/2020'),
   endDate: new Date('10/01/2023'),
-  blurb: "As a Senior Software Engineer (Team Lead), I primarily architected the Kava Labs webapp (a realtime interface to Kava's blockchain). I also spent time not only working on development, but also by improving the way we we're working.",
+  blurb: "As a Senior Software Engineer (Team Lead), I primarily architected the Kava Labs webapp (a realtime interface to Kava's blockchain). I also spent time improving our processes (like adding a CI/CD pipeline) which reduced feature turnaround time.",
   description: [
     "As a Senior Software Engineer (Team Lead), I primarily architected the Kava Labs webapp (a realtime interface to Kava's blockchain).  Since Kava was a small startup in crypto, I often wore many hats across design, product, and engineering.",
     "As we hired additional lower level engineers, I onboarded and mentored three separate engineers who were each later promoted.  As the team grew, I began to focus more on architecture and scaling.",
-    "I also spent time not only working on development, but also by improving the way we we're working through process change.",
+    "While my programming focus at Kava was very frontend focused, I served as an engineering contact point for multiple, non-product departments which opened lines of communication and made the company more cohesive.",
   ],
   technologiesUsed: {
     languages: 'Typescript',
@@ -51,14 +53,16 @@ export const KAVA_LABS_SR_SOFTWARE_ENGINEER: Job = {
     otherTechnologies: 'Github, Netlify, Figma, Material-UI, Webpack'
   },
   experienceList: [
-    'Assisted in architecting Kava-Labs’ web app using react/redux, react testing library, enzyme, and material-ui',
-    'Setup Sentry for web app error monitoring and contributed to 3rd party crypto packages to fix bugs',
-    'Worked with UX to design and wireframe concepts for future app features, sometimes through multiple iterations',
-    'Built A/B testing and google analytics event tracking to assist design/product with user metric tracking and conversions',
-    'Built a pair programming exercise for F.E. engineering that served all skill levels of engineer hiring (using react)',
-    'Converted the majority of the application from javascript to typescript',
-    'Managed sprints for the front-end team working closely with product to ensure features driving business goals were completed on time.',
-    'Lead and mentored a team of 4 frontend engineers, (2 S.E.’s, 1 Jr. S.E.)',
+    "Built a well-factored codebase using react/redux, react testing library, and playwright with 80% test coverage, resulting in a more reliable product",
+    "Setup Sentry for error monitoring and posted errors to slack resulting in faster turn around time on bugs",
+    "Contributed to 3rd party crypto packages to help keep community packages updated",
+    "Worked with UX to design concepts for future app features, and translated those designs into smaller deliverable, sequeuenced tickets",
+    "Built A/B testing and google analytics event tracking to assist design/product with user metric tracking and conversions",
+    "Built a pair programming exercise for F.E. engineering which was used to screen multiple developers at different skill levels",
+    "Converted the majority of the application from javascript to typescript",
+    "Managed sprints for the front-end team working closely with product to ensure features driving business goals were completed on time",
+    "Created a new-hire onboarding guide which helped reduce technical setup and basic onboarding by multiple days",
+    "Collaborated with designers, developers, and business development to ensure delivered products meet requirements",
   ]
 };
 
@@ -82,10 +86,10 @@ export const TEAMSNAP_SOFTWARE_ENGINEER: Job = {
     otherTechnologies: 'Github, Netlify, Figma, Material-UI, Webpack'
   },
   experienceList: [
-    'Replaced Mobx with Redux and ReduxForm in a major frontend application',
-    'Setup frontend automation in multiple projects to start tracking and increasing code coverage',
-    'Participated in discussions with product and UX leads to redesign application',
-    'Implemented specific client registration forms using Rails and JQuery'
+    "Replaced Mobx with Redux and ReduxForm in a major frontend application in order to align our app with the company's other frontend projects",
+    'Setup frontend CI/CD and unit testing through jest/enzyme in multiple projects to start tracking and increasing code coverage which increased code quality and documentation',
+    'Ideated with product and UX to help implement a new design library to be used across mutliple frontend projects, making it easier to stay on brand and helping unify the design across apps',
+    'Implemented specific client registration forms using Rails and JQuery which simplified our customer onboarding process',
   ]
 };
 
