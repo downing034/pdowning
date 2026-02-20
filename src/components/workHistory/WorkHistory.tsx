@@ -160,6 +160,16 @@ function NeonCard({ r }: NeonCardProps) {
   const [borderPct, setBorderPct] = useState(0);
   const borderRef = useRef<number | null>(null);
   const pctRef = useRef(0);
+  const [isMobile, setIsMobile] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(max-width: 860px)').matches,
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 860px)');
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   useEffect(() => {
     if (revealed) return;
@@ -397,7 +407,7 @@ function NeonCard({ r }: NeonCardProps) {
                 right: '0.9rem',
                 fontSize: '0.58rem',
                 letterSpacing: '0.14em',
-                color: hovered ? c : 'transparent',
+                color: hovered || isMobile ? `${c}${hovered ? '' : '88'}` : 'transparent',
                 fontFamily: 'monospace',
                 textTransform: 'uppercase',
                 transition: 'color 0.2s',
@@ -410,7 +420,7 @@ function NeonCard({ r }: NeonCardProps) {
                 style={{
                   width: 12,
                   height: 1,
-                  background: hovered ? c : 'transparent',
+                  background: hovered || isMobile ? `${c}${hovered ? '' : '88'}` : 'transparent',
                   transition: 'background 0.2s',
                   display: 'inline-block',
                 }}

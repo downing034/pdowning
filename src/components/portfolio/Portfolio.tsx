@@ -108,28 +108,47 @@ const PROJECTS: Project[] = [
 ];
 
 // ── Hidden back-face measurer — renders the back content offscreen to get its natural height
-function BackMeasurer({ project, onHeight }: { project: Project; onHeight: (h: number) => void }) {
+function useCardWidth() {
+  const getWidth = () => {
+    if (typeof window === 'undefined') return 320;
+    const vw = window.innerWidth;
+    if (vw <= 860) return Math.min(400, vw - 48); // mobile: single col, matches max-width
+    const container = Math.min(1100, vw - 48); // desktop: 3-col grid within 1100px container
+    return (container - 64) / 3; // subtract 2rem * 2 gaps
+  };
+  const [w, setW] = useState(getWidth);
+  useEffect(() => {
+    const onResize = () => setW(getWidth());
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  return w;
+}
+
+function BackMeasurer({
+  project,
+  onHeight,
+  width,
+}: {
+  project: Project;
+  onHeight: (h: number) => void;
+  width: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const { name, tags, githubPrivate, live, story } = project;
 
   useEffect(() => {
-    const measure = () => {
-      if (ref.current) onHeight(ref.current.offsetHeight);
-    };
-    measure();
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [onHeight]);
+    if (ref.current) onHeight(ref.current.offsetHeight);
+  }, [onHeight, width]);
 
   return (
     <div
       ref={ref}
-      className="back-measurer"
       style={{
         position: 'absolute',
         visibility: 'hidden',
         pointerEvents: 'none',
-        width: 'calc((100% - 4rem) / 3)', // matches 3-col grid with 2rem gap
+        width,
         left: 0,
         top: 0,
       }}
@@ -835,13 +854,24 @@ export default function Portfolio() {
     return () => obs.disconnect();
   }, []);
 
-  const handleBackHeight = useCallback((index: number, h: number) => {
-    heightsRef.current[index] = h;
-    const filled = heightsRef.current.filter(Boolean);
-    if (filled.length === PROJECTS.length) {
-      setCardHeight(Math.max(...heightsRef.current));
-    }
-  }, []);
+  const cardWidth = useCardWidth();
+  const prevWidthRef = useRef(cardWidth);
+
+  const handleBackHeight = useCallback(
+    (index: number, h: number) => {
+      // Reset all heights when card width changes (viewport resize / orientation)
+      if (prevWidthRef.current !== cardWidth) {
+        heightsRef.current = [];
+        prevWidthRef.current = cardWidth;
+      }
+      heightsRef.current[index] = h;
+      const filled = heightsRef.current.filter(Boolean);
+      if (filled.length === PROJECTS.length) {
+        setCardHeight(Math.max(...heightsRef.current));
+      }
+    },
+    [cardWidth],
+  );
 
   return (
     <section
@@ -865,7 +895,6 @@ export default function Portfolio() {
         @media (max-width: 860px) {
           .projects-grid { grid-template-columns: 1fr !important; }
           .projects-grid > div { max-width: 400px; margin: 0 auto; width: 100%; }
-          .back-measurer { width: min(400px, 100%) !important; }
           .card-image-wrap { max-height: 180px !important; }
         }
       `}</style>
@@ -888,6 +917,7 @@ export default function Portfolio() {
             key={`measure-${p.id}`}
             project={p}
             onHeight={(h) => handleBackHeight(i, h)}
+            width={cardWidth}
           />
         ))}
 
