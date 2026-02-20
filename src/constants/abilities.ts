@@ -13,9 +13,9 @@ export const CODING_ABILITIES: Abilities = [
   { name: 'GIT', skillLevel: 4 },
   { name: 'Github / Gitlab', skillLevel: 4 },
   { name: 'Netlify', skillLevel: 4 },
-  { name: 'Ruby', skillLevel: 4 }, 
-  { name: 'Webpack', skillLevel: 4},
-  
+  { name: 'Ruby', skillLevel: 4 },
+  { name: 'Webpack', skillLevel: 4 },
+
   { name: 'CI / CD', skillLevel: 3 },
   { name: 'Docker', skillLevel: 3 },
   { name: 'Heroku', skillLevel: 3 },
@@ -31,11 +31,11 @@ export const CODING_ABILITIES: Abilities = [
 
 export const DESIGN_ABILITIES: Abilities = [
   { name: 'Material UI', skillLevel: 5 },
-  
+
   { name: 'Bootstrap', skillLevel: 4 },
-  
+
   { name: 'Framer Motion', skillLevel: 2 },
-  
+
   { name: 'Tailwind', skillLevel: 2 },
 ];
 
@@ -43,11 +43,11 @@ export const TESTING_ABILITIES: Abilities = [
   { name: 'Enzyme', skillLevel: 5 },
   { name: 'Jest', skillLevel: 5 },
   { name: 'React Testing Library', skillLevel: 5 },
-  
+
   { name: 'Capybara', skillLevel: 3 },
   { name: 'Cucumber', skillLevel: 3 },
   { name: 'Rspec', skillLevel: 3 },
-  
+
   { name: 'Cypress', skillLevel: 2 },
   { name: 'PlayWright', skillLevel: 2 },
 ];
@@ -59,7 +59,7 @@ export const TOOLS_ABILITIES: Abilities = [
 
   { name: 'Jira / Atlassian', skillLevel: 4 },
   { name: 'Shortcut', skillLevel: 4 },
-  
+
   { name: 'Figma', skillLevel: 2 },
 ];
 
