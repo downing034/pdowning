@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family:
+      'Inter',
+      system-ui,
+      -apple-system,
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0a0a0f;
+    color: #e4e4e7;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light;
+  }
+
+  .glass {
+    @apply bg-darkSlate/70 backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+
+  .glass-card {
+    @apply bg-surface-light/80 backdrop-blur-sm border border-white/10 rounded-2xl transition-all duration-300;
+  }
+
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-20;
+  }
+
+  .hero-name-letter {
+    background: linear-gradient(135deg, #ffffff 0%, #ff8c38 40%, #bf5700 60%, #ffffff 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: nameShimmer 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(191, 87, 0, 0.3));
+  }
+}
+
+@keyframes nameShimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Accessibility: focus-visible ring for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #bf5700;
+  outline-offset: 2px;
+}
