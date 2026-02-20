@@ -10,13 +10,6 @@ interface Panel {
   statLabel: string;
 }
 
-interface Team {
-  name: string;
-  sport: string;
-  color: string;
-  accent: string;
-}
-
 // ── Data ─────────────────────────────────────────────────────────────────────
 const PANELS: Panel[] = [
   {
@@ -43,18 +36,6 @@ const PANELS: Panel[] = [
 ];
 
 const ACCENTS = ['#00c8ff', '#a78bfa', '#BF5700'];
-
-const TEAMS: Team[] = [
-  { name: 'Packers', sport: 'NFL', color: '#203731', accent: '#FFB612' },
-  { name: 'Astros', sport: 'MLB', color: '#002D62', accent: '#EB6E1F' },
-  { name: 'Longhorns', sport: 'NCAAF', color: '#BF5700', accent: '#fff' },
-  { name: 'Gophers', sport: 'NCAAF', color: '#7A0019', accent: '#FFCC33' },
-  { name: 'Nuggets', sport: 'NBA', color: '#0E2240', accent: '#FEC524' },
-  { name: 'Avalanche', sport: 'NHL', color: '#6F263D', accent: '#236192' },
-  { name: 'Buffaloes', sport: 'NCAAF', color: '#CFB87C', accent: '#000' },
-  { name: 'Bucks', sport: 'NBA', color: '#00471B', accent: '#EEE1C6' },
-  { name: 'Wild', sport: 'NHL', color: '#154734', accent: '#A6192E' },
-];
 
 // ── Hooks ────────────────────────────────────────────────────────────────────
 function useVisible(ref: React.RefObject<HTMLElement | null>, threshold = 0.15) {
@@ -308,103 +289,70 @@ function PersonalBreak() {
         @keyframes cursorBlink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
       `}</style>
 
-      {/* Name variant switcher */}
       <NameVariants visible={visible} />
+    </div>
+  );
+}
 
-      {/* Divider with label */}
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '1rem',
-          marginBottom: '1.5rem',
-          opacity: visible ? 1 : 0,
-          animation: visible ? 'fadeUp 0.6s ease 0.2s both' : 'none',
-        }}
-      >
-        <span
+// ── Summary snapshot ────────────────────────────────────────────────────────
+const SNAPSHOT_ITEMS = [
+  { label: 'Teams Led', value: '3\u20135 Engineers', accent: '#00c8ff' },
+  { label: 'Core Stack', value: 'React \u00b7 TypeScript \u00b7 Rails', accent: '#a78bfa' },
+  { label: 'Products', value: 'DeFi \u00b7 Sports Tech \u00b7 GovTech', accent: '#BF5700' },
+  { label: 'Approach', value: 'Ship Fast \u00b7 Test Well \u00b7 Communicate', accent: '#00c8ff' },
+];
+
+function SummarySnapshot() {
+  const ref = useRef<HTMLDivElement>(null);
+  const visible = useVisible(ref, 0.15);
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        marginTop: '3rem',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+        gap: '1rem',
+      }}
+    >
+      {SNAPSHOT_ITEMS.map((item, i) => (
+        <div
+          key={item.label}
           style={{
-            fontSize: '0.85rem',
-            letterSpacing: '0.3em',
-            color: 'rgba(255,255,255,0.4)',
-            fontFamily: 'monospace',
-            textTransform: 'uppercase',
-            whiteSpace: 'nowrap',
+            background: 'rgba(255,255,255,0.03)',
+            border: '1px solid rgba(255,255,255,0.06)',
+            borderLeft: `3px solid ${item.accent}`,
+            borderRadius: 4,
+            padding: '1rem 1.25rem',
+            opacity: visible ? 1 : 0,
+            animation: visible ? `fadeUp 0.5s ease ${0.1 + i * 0.1}s both` : 'none',
           }}
         >
-          My Teams
-        </span>
-        <div style={{ flex: 1, height: 1, background: 'rgba(255,255,255,0.06)' }} />
-        <span
-          style={{
-            fontSize: '0.78rem',
-            letterSpacing: '0.2em',
-            color: 'rgba(255,255,255,0.28)',
-            fontFamily: 'monospace',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          Yes, all of them
-        </span>
-      </div>
-
-      {/* Team badges */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-        {TEAMS.map((t, i) => (
           <div
-            key={t.name}
-            role="presentation"
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              padding: '0.4rem 0.85rem 0.4rem 0.6rem',
-              borderRadius: 4,
-              background: `${t.color}cc`,
-              border: `1px solid ${t.accent}33`,
-              opacity: visible ? 1 : 0,
-              animation: visible ? `teamIn 0.4s ease ${0.3 + i * 0.06}s both` : 'none',
-              cursor: 'default',
-              transition: 'transform 0.15s, box-shadow 0.15s',
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
-              (e.currentTarget as HTMLDivElement).style.boxShadow = `0 4px 16px ${t.color}66`;
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
-              (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
+              fontSize: '0.7rem',
+              letterSpacing: '0.25em',
+              color: 'rgba(255,255,255,0.4)',
+              fontFamily: 'monospace',
+              textTransform: 'uppercase',
+              marginBottom: '0.4rem',
             }}
           >
-            {/* Sport pill */}
-            <span
-              style={{
-                fontSize: '0.7rem',
-                letterSpacing: '0.15em',
-                color: `${t.accent}99`,
-                fontFamily: 'monospace',
-                textTransform: 'uppercase',
-                background: 'rgba(0,0,0,0.3)',
-                padding: '0.12rem 0.38rem',
-                borderRadius: 2,
-              }}
-            >
-              {t.sport}
-            </span>
-            <span
-              style={{
-                fontSize: '1rem',
-                fontWeight: 700,
-                color: t.accent,
-                fontFamily: 'system-ui, sans-serif',
-                letterSpacing: '0.01em',
-              }}
-            >
-              {t.name}
-            </span>
+            {item.label}
           </div>
-        ))}
-      </div>
+          <div
+            style={{
+              fontSize: 'clamp(0.9rem, 2vw, 1.05rem)',
+              color: '#fff',
+              fontWeight: 600,
+              fontFamily: 'system-ui, sans-serif',
+            }}
+          >
+            {item.value}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -441,18 +389,21 @@ export default function About() {
       />
 
       <div style={{ maxWidth: 900, margin: '0 auto', position: 'relative' }}>
-        {/* Personal break — comes first */}
+        {/* Personal intro */}
         <PersonalBreak />
 
         {/* Divider before panels */}
         <div style={{ height: 1, background: 'rgba(255,255,255,0.06)', margin: '4rem 0 3.5rem' }} />
 
-        {/* Panels */}
+        {/* Stat panels */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
           {PANELS.map((p, i) => (
             <BroadcastPanel key={i} p={p} i={i} />
           ))}
         </div>
+
+        {/* Quick snapshot */}
+        <SummarySnapshot />
       </div>
     </section>
   );

@@ -56,35 +56,11 @@ describe('About', () => {
     vi.useRealTimers();
   });
 
-  it('renders the "My Teams" section label', () => {
+  it('renders the summary snapshot cards', () => {
     render(<About />);
-    expect(screen.getByText('My Teams')).toBeInTheDocument();
-  });
-
-  it('renders all team badges', () => {
-    render(<About />);
-    const teamNames = [
-      'Packers',
-      'Astros',
-      'Longhorns',
-      'Gophers',
-      'Nuggets',
-      'Avalanche',
-      'Buffaloes',
-      'Bucks',
-      'Wild',
-    ];
-    teamNames.forEach((name) => {
-      expect(screen.getByText(name)).toBeInTheDocument();
-    });
-  });
-
-  it('renders team sport labels', () => {
-    render(<About />);
-    expect(screen.getAllByText('NFL').length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText('MLB').length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText('NBA').length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText('NHL').length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText('NCAAF').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText('Teams Led')).toBeInTheDocument();
+    expect(screen.getByText('Core Stack')).toBeInTheDocument();
+    expect(screen.getByText('Products')).toBeInTheDocument();
+    expect(screen.getByText('Approach')).toBeInTheDocument();
   });
 });

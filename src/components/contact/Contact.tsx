@@ -13,6 +13,13 @@ interface ContactLink {
   short: string;
 }
 
+interface Team {
+  name: string;
+  sport: string;
+  color: string;
+  accent: string;
+}
+
 // ── Data ─────────────────────────────────────────────────────────────────────
 const TICKER_ITEMS = [
   'PAUL DOWNING HAS CLEARED WAIVERS',
@@ -70,6 +77,18 @@ function useVisible(ref: React.RefObject<HTMLElement | null>, threshold = 0.1) {
   return v;
 }
 
+const TEAMS: Team[] = [
+  { name: 'Packers', sport: 'NFL', color: '#203731', accent: '#FFB612' },
+  { name: 'Astros', sport: 'MLB', color: '#002D62', accent: '#EB6E1F' },
+  { name: 'Longhorns', sport: 'NCAAF', color: '#BF5700', accent: '#fff' },
+  { name: 'Gophers', sport: 'NCAAF', color: '#7A0019', accent: '#FFCC33' },
+  { name: 'Nuggets', sport: 'NBA', color: '#0E2240', accent: '#FEC524' },
+  { name: 'Avalanche', sport: 'NHL', color: '#6F263D', accent: '#236192' },
+  { name: 'Buffaloes', sport: 'NCAAF', color: '#CFB87C', accent: '#000' },
+  { name: 'Bucks', sport: 'NBA', color: '#00471B', accent: '#EEE1C6' },
+  { name: 'Wild', sport: 'NHL', color: '#154734', accent: '#A6192E' },
+];
+
 const ACCENT = '#1a6edb';
 const ACCENT_DARK = '#0f4fa8';
 const ACCENT_HOVER = 'rgba(26,110,219,0.08)';
@@ -123,6 +142,14 @@ export default function Contact() {
         @keyframes sectionIn {
           from { opacity: 0; transform: translateY(20px); }
           to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(16px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes teamIn {
+          from { opacity: 0; transform: translateY(8px) scale(0.95); }
+          to   { opacity: 1; transform: translateY(0) scale(1); }
         }
         @keyframes linkHover {
           from { width: 0; }
@@ -366,6 +393,108 @@ export default function Contact() {
                 />
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── MY TEAMS ── */}
+      <div
+        style={{
+          padding: '0 1.5rem 2.5rem',
+          opacity: visible ? 1 : 0,
+          animation: visible ? 'sectionIn 0.6s ease 0.3s both' : 'none',
+        }}
+      >
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          {/* Divider with label */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '1.5rem',
+            }}
+          >
+            <span
+              style={{
+                fontSize: '0.85rem',
+                letterSpacing: '0.3em',
+                color: 'rgba(255,255,255,0.4)',
+                fontFamily: 'monospace',
+                textTransform: 'uppercase',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              My Teams
+            </span>
+            <div style={{ flex: 1, height: 1, background: 'rgba(255,255,255,0.06)' }} />
+            <span
+              style={{
+                fontSize: '0.78rem',
+                letterSpacing: '0.2em',
+                color: 'rgba(255,255,255,0.28)',
+                fontFamily: 'monospace',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              Yes, all of them
+            </span>
+          </div>
+
+          {/* Team badges */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            {TEAMS.map((t, i) => (
+              <div
+                key={t.name}
+                role="presentation"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '0.4rem 0.85rem 0.4rem 0.6rem',
+                  borderRadius: 4,
+                  background: `${t.color}cc`,
+                  border: `1px solid ${t.accent}33`,
+                  animation: visible ? `teamIn 0.4s ease ${0.3 + i * 0.06}s both` : 'none',
+                  cursor: 'default',
+                  transition: 'transform 0.15s, box-shadow 0.15s',
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)';
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = `0 4px 16px ${t.color}66`;
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: '0.7rem',
+                    letterSpacing: '0.15em',
+                    color: `${t.accent}99`,
+                    fontFamily: 'monospace',
+                    textTransform: 'uppercase',
+                    background: 'rgba(0,0,0,0.3)',
+                    padding: '0.12rem 0.38rem',
+                    borderRadius: 2,
+                  }}
+                >
+                  {t.sport}
+                </span>
+                <span
+                  style={{
+                    fontSize: '1rem',
+                    fontWeight: 700,
+                    color: t.accent,
+                    fontFamily: 'system-ui, sans-serif',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  {t.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

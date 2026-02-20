@@ -72,6 +72,29 @@ describe('Contact', () => {
     expect(screen.getByText(/© 2026 PAUL DOWNING/)).toBeInTheDocument();
   });
 
+  it('renders the "My Teams" section label', () => {
+    render(<Contact />);
+    expect(screen.getByText('My Teams')).toBeInTheDocument();
+  });
+
+  it('renders all team badges', () => {
+    render(<Contact />);
+    const teamNames = [
+      'Packers',
+      'Astros',
+      'Longhorns',
+      'Gophers',
+      'Nuggets',
+      'Avalanche',
+      'Buffaloes',
+      'Bucks',
+      'Wild',
+    ];
+    teamNames.forEach((name) => {
+      expect(screen.getByText(name)).toBeInTheDocument();
+    });
+  });
+
   it('displays the cycling transaction stat', () => {
     render(<Contact />);
     // The first transaction is shown on load

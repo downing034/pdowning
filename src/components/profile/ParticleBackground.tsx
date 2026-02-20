@@ -56,7 +56,7 @@ const ParticleBackground = () => {
     if (!octx) return;
 
     // Font scales with width, capped at max
-    const fs = Math.min(W * SCALE * 0.14, 200);
+    const fs = Math.min(W * SCALE * 0.165, 240);
     octx.fillStyle = 'white';
     octx.font = `900 ${fs}px 'Arial Black','Impact',sans-serif`;
     octx.textAlign = 'center';
@@ -374,7 +374,8 @@ const ParticleBackground = () => {
         className="absolute left-1/2 -translate-x-1/2 bottom-4 pointer-events-none z-10 whitespace-nowrap font-mono tracking-[0.2em] uppercase"
         style={{
           fontSize: '0.78rem',
-          color: 'rgba(0,200,255,0.3)',
+          color: 'rgba(0,200,255,0.55)',
+          textShadow: '0 0 8px rgba(0,200,255,0.3)',
         }}
       >
         Move to repel · Click to explode

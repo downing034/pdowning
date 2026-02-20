@@ -16,7 +16,14 @@ const LINES: TerminalLine[] = [
   { prompt: '>', text: ' paul.passion' },
   { text: '  "Building teams & shipping products"', isOutput: true },
   { prompt: '>', text: ' paul.status' },
-  { text: '  "Open to opportunities"', isOutput: true },
+  { text: '  "Waiting for next deployment"', isOutput: true },
+  { prompt: '>', text: ' paul.strengths.top(5)' },
+  {
+    text: '  ["React/TS", "Team Leadership", "CI/CD", "Rails", "Product Thinking"]',
+    isOutput: true,
+  },
+  { prompt: '>', text: ' paul.superpower' },
+  { text: '  "Making engineers around me better"', isOutput: true },
 ];
 
 const TerminalAnimation = () => {
