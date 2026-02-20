@@ -113,12 +113,18 @@ function BackMeasurer({ project, onHeight }: { project: Project; onHeight: (h: n
   const { name, tags, githubPrivate, live, story } = project;
 
   useEffect(() => {
-    if (ref.current) onHeight(ref.current.offsetHeight);
+    const measure = () => {
+      if (ref.current) onHeight(ref.current.offsetHeight);
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
   }, [onHeight]);
 
   return (
     <div
       ref={ref}
+      className="back-measurer"
       style={{
         position: 'absolute',
         visibility: 'hidden',
@@ -390,7 +396,10 @@ function ProjectCard({
           </div>
 
           {/* Screenshot — flex:1 so it takes all remaining space after body */}
-          <div style={{ position: 'relative', flex: 1, minHeight: 0, overflow: 'hidden' }}>
+          <div
+            className="card-image-wrap"
+            style={{ position: 'relative', flex: 1, minHeight: 0, overflow: 'hidden' }}
+          >
             <img
               src={image}
               alt={name}
@@ -828,9 +837,9 @@ export default function Portfolio() {
 
   const handleBackHeight = useCallback((index: number, h: number) => {
     heightsRef.current[index] = h;
-    if (heightsRef.current.filter(Boolean).length === PROJECTS.length) {
-      const maxH = Math.max(...heightsRef.current);
-      setCardHeight(maxH);
+    const filled = heightsRef.current.filter(Boolean);
+    if (filled.length === PROJECTS.length) {
+      setCardHeight(Math.max(...heightsRef.current));
     }
   }, []);
 
@@ -856,6 +865,8 @@ export default function Portfolio() {
         @media (max-width: 860px) {
           .projects-grid { grid-template-columns: 1fr !important; }
           .projects-grid > div { max-width: 400px; margin: 0 auto; width: 100%; }
+          .back-measurer { width: min(400px, 100%) !important; }
+          .card-image-wrap { max-height: 180px !important; }
         }
       `}</style>
 
