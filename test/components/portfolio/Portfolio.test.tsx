@@ -17,21 +17,21 @@ describe('Portfolio', () => {
   it('renders all three project cards', () => {
     render(<Portfolio />);
     // Names appear multiple times: BackMeasurer + front face header + front body + back face header
-    expect(screen.getAllByText('Game Day Oracle').length).toBeGreaterThanOrEqual(2);
+    expect(screen.getAllByText('Paragon Sports Intelligence').length).toBeGreaterThanOrEqual(2);
     expect(screen.getAllByText('Wedding Recipe Book').length).toBeGreaterThanOrEqual(2);
     expect(screen.getAllByText('This Portfolio').length).toBeGreaterThanOrEqual(2);
   });
 
   it('renders project one-liners', () => {
     render(<Portfolio />);
-    expect(screen.getByText(/Sports prediction engine/)).toBeInTheDocument();
+    expect(screen.getByText(/AI-powered NCAAM prediction platform/i)).toBeInTheDocument();
     expect(screen.getByText(/digital cookbook built as a wedding favor/)).toBeInTheDocument();
     expect(screen.getByText(/site you're currently on/)).toBeInTheDocument();
   });
 
   it('renders project stats', () => {
     render(<Portfolio />);
-    expect(screen.getByText('77%')).toBeInTheDocument();
+    expect(screen.getByText('4')).toBeInTheDocument();
     expect(screen.getByText('100+')).toBeInTheDocument();
     expect(screen.getByText('∞')).toBeInTheDocument();
   });
@@ -74,7 +74,7 @@ describe('Portfolio', () => {
     await user.click(cardContainers[0]);
 
     // Check for live site link - appears in BackMeasurer and in the back face
-    const liveLinks = screen.getAllByText(/sports-predictions\.pdowning\.com/);
+    const liveLinks = screen.getAllByText(/paragon-sports-intelligence\.com/);
     expect(liveLinks.length).toBeGreaterThanOrEqual(1);
   });
 

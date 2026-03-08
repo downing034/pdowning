@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
-import { GameDayOracle, RecipesScreenshot, HomeScreenshot } from 'images';
+import { ParagonSportsIntelligence, RecipesScreenshot, HomeScreenshot } from 'images';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 interface Project {
@@ -18,37 +18,38 @@ interface Project {
   githubPrivate: boolean;
   live: string;
   story: string;
+  imageStyle?: React.CSSProperties;
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 const PROJECTS: Project[] = [
   {
-    id: 'gdo',
-    name: 'Game Day Oracle',
+    id: 'psi',
+    name: 'Paragon Sports Intelligence',
     oneliner:
-      'Sports prediction engine with real statistical models for MLB and NCAAM — accuracy that actually moves lines.',
-    stat: '77%',
-    statLabel: 'NCAAM Accuracy',
-    statSub: '68% MLB · models in production',
-    accent: '#00c8ff',
-    accentDark: '#0090bb',
-    accentBg: 'rgba(0,200,255,0.07)',
-    image: GameDayOracle,
+      'AI-powered NCAAM prediction platform with 4 ensemble ML models, live game data, and a full-stack React + Rails engine.',
+    stat: '4',
+    statLabel: 'ML Models',
+    statSub: 'spread · moneyline · over/under',
+    accent: '#6366f1',
+    accentDark: '#4338ca',
+    accentBg: 'rgba(99,102,241,0.07)',
+    image: ParagonSportsIntelligence,
     tags: [
-      'React',
+      'React 19',
       'TypeScript',
-      'Ruby on Rails',
+      'Rails 8',
       'Python',
-      'Heroku',
-      'Netlify',
+      'Inertia.js',
+      'PostgreSQL',
+      'Docker/Kamal',
       'ML Models',
-      'REST API',
     ],
     github: 'https://github.com/downing034/gdo-api',
     githubPrivate: true,
-    live: 'https://sports-predictions.pdowning.com',
+    live: 'https://www.paragon-sports-intelligence.com',
     story:
-      'Full stack from the ground up. Rails API backend, Python statistical models trained on real game data, React/TS frontend. Currently predicts MLB and NCAAM. More leagues in progress.',
+      'Full stack from the ground up. Rails 8 API with Inertia.js, 4 Python ML models trained on real game data, React 19/TS frontend with Tailwind. Predicts NCAAM spreads, moneylines, and totals with confidence-scored PSI Picks.',
   },
   {
     id: 'recipes',
@@ -57,7 +58,7 @@ const PROJECTS: Project[] = [
       'A digital cookbook built as a wedding favor — guests submitted recipes, we shipped them an app.',
     stat: '100+',
     statLabel: 'Recipes',
-    statSub: 'search · tags · keep screen on',
+    statSub: 'search · tags · wake lock',
     accent: '#f59e0b',
     accentDark: '#b45309',
     accentBg: 'rgba(245,158,11,0.07)',
@@ -280,6 +281,7 @@ function ProjectCard({
     githubPrivate,
     live,
     story,
+    imageStyle,
   } = project;
 
   // Smooth lerp
@@ -414,10 +416,10 @@ function ProjectCard({
             </span>
           </div>
 
-          {/* Screenshot — flex:1 so it takes all remaining space after body */}
+          {/* Screenshot — fixed height so content aligns across cards */}
           <div
             className="card-image-wrap"
-            style={{ position: 'relative', flex: 1, minHeight: 0, overflow: 'hidden' }}
+            style={{ position: 'relative', height: 180, overflow: 'hidden' }}
           >
             <img
               src={image}
@@ -428,6 +430,7 @@ function ProjectCard({
                 objectFit: 'cover',
                 objectPosition: 'top',
                 display: 'block',
+                ...imageStyle,
               }}
             />
             <div

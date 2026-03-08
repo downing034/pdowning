@@ -19,5 +19,6 @@ export { default as TvWall } from './tvWall.jpg';
 export { default as TwitterApp } from './twitterApp.jpg';
 export { default as YelpDemo } from './yelpPhoto.jpg';
 export { default as GameDayOracle } from './game_day_oracle_pdowning.png';
+export { default as ParagonSportsIntelligence } from './paragon_sports_intelligence.png';
 export { default as RecipesScreenshot } from './recipes_pdowning.png';
 export { default as HomeScreenshot } from './home_pdowning.png';
