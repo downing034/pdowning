@@ -1,16 +1,43 @@
 import { Job } from './types';
 
+export const PARAGON_FOUNDER: Job = {
+  title: 'Founder and Software Engineer',
+  companyName: 'Paragon Sports Intelligence',
+  location: 'Denver, CO (Remote)',
+  website: 'https://www.paragon-sports-intelligence.com',
+  startDate: new Date('01/01/2026'),
+  endDate: 'Current',
+  blurb:
+    'As founder and sole engineer, I built and run Paragon Sports Intelligence, an AI-powered sports prediction platform.',
+  description: [
+    'As founder and sole engineer, I built and run Paragon Sports Intelligence, an AI-powered sports prediction platform with a Ruby on Rails backend and a React and TypeScript frontend through Inertia.js, deployed on Heroku.',
+    "I build Python prediction models for NCAA men's basketball, MLB, and the NFL, using AI tools to accelerate data research.",
+  ],
+  technologiesUsed: {
+    languages: 'Ruby, TypeScript, Python',
+    frameWorks: 'Rails, React, Inertia.js',
+    environment: 'Heroku',
+    testingTechnologies: 'RSpec, React Testing Library',
+    otherTechnologies: 'GitHub Actions, RuboCop, Prettier, Claude Code',
+  },
+  experienceList: [
+    'Built and launched an AI-powered sports prediction platform as the sole engineer: Ruby on Rails backend and REST API, React and TypeScript frontend using Inertia.js, deployed on Heroku',
+    'Developed Python prediction models for NCAAM games (~80% accuracy picking winners, ~7-point mean absolute error), MLB scores and starting pitchers, and NFL scores and player props (pre-release)',
+    'Built a CI/CD pipeline that runs RSpec and React Testing Library suites plus RuboCop and Prettier checks',
+  ],
+};
+
 export const KAVA_LABS_SOFTWARE_ENGINEERING_MANAGER: Job = {
   title: 'Software Engineering Manager',
   companyName: 'Kava Labs',
   location: 'Remote',
   website: 'https://app.kava.io',
-  startDate: new Date('10/01/2023'),
-  endDate: 'Current',
+  startDate: new Date('10/01/2025'),
+  endDate: new Date('12/01/2025'),
   blurb:
-    "As an Engineering Manager, I manage a team of three developers, providing task management, roadmap definition, and development guidance. I've improved product workflows and helped the product organization better understand our users through A/B testing and Google Analytics.",
+    'As an Engineering Manager, I managed a team of three developers, providing task management, roadmap definition, and development guidance. I improved product workflows and helped the product organization better understand our users through A/B testing and Google Analytics.',
   description: [
-    "As an Engineering Manager, I manage a team of three developers, providing task management, roadmap definition, and development guidance. I've spent time improving product workflows and opening lines of communication between engineers and other departments.",
+    'As an Engineering Manager, I managed a team of three developers, providing task management, roadmap definition, and development guidance. I spent time improving product workflows and opening lines of communication between engineers and other departments.',
     'To help shorten cycle time for bugs, I created a bug workflow process which included user impact and severity assessment. This process included a bi-weekly on-call handoff meeting and created clear ownership of bug tasks.',
     'I helped implement a CI/CD pipeline that ensured each of our tests suites were run prior to deployment resulting in a direct reduction of regressions.',
   ],
@@ -37,7 +64,7 @@ export const KAVA_LABS_SR_SOFTWARE_ENGINEER: Job = {
   location: 'Remote',
   website: 'https://app.kava.io',
   startDate: new Date('10/15/2020'),
-  endDate: new Date('10/01/2023'),
+  endDate: new Date('10/01/2025'),
   blurb:
     "As a Senior Software Engineer (Team Lead), I primarily architected the Kava Labs webapp (a realtime interface to Kava's blockchain). I also spent time improving our processes (like adding a CI/CD pipeline) which reduced feature turnaround time.",
   description: [
@@ -99,7 +126,7 @@ export const GRANICUS_SOFTWARE_ENGINEER: Job = {
   companyName: 'Granicus',
   location: 'Denver, CO (Remote)',
   website: 'https://granicus.com',
-  startDate: new Date('03/01/2017'),
+  startDate: new Date('01/01/2017'),
   endDate: new Date('10/12/2019'),
   blurb:
     'As a full-stack Software Engineer, I worked across multiple business lines and teams primarily in Ruby on Rails or React.',
@@ -124,15 +151,15 @@ export const GRANICUS_SOFTWARE_ENGINEER: Job = {
 
 export const GRANICUS_SOFTWARE_AUTOMATION_ENGINEER: Job = {
   title: 'Software Automation Engineer',
-  companyName: 'Grancius',
+  companyName: 'Granicus',
   location: 'Saint Paul, MN',
   website: 'https://granicus.com',
   startDate: new Date('10/12/2015'),
-  endDate: new Date('03/01/2017'),
+  endDate: new Date('01/01/2017'),
   blurb:
-    'As a Software Automation Engineer, I primarily wrote UI driven end to end tests utilizing Ruby, Capybara, and Selenium Webdriver and automated over 1500 manual test cases.',
+    'As a Software Automation Engineer, I primarily wrote UI driven end to end tests utilizing Ruby, Capybara, and Selenium Webdriver and automated over 1,500 test cases (1,200+ for new features and 300+ manual backlog cases).',
   description: [
-    'As a Software Automation Engineer, I primarily wrote UI driven end to end tests utilizing Ruby, Capybara, and Selenium Webdriver and automated over 1500 manual test cases.',
+    'As a Software Automation Engineer, I primarily wrote UI driven end to end tests utilizing Ruby, Capybara, and Selenium Webdriver and automated over 1,500 test cases (1,200+ for new features and 300+ manual backlog cases).',
     'Additionally, I assisted other manual quality assurance analysts with writing automated tests.',
   ],
   technologiesUsed: {
@@ -144,7 +171,7 @@ export const GRANICUS_SOFTWARE_AUTOMATION_ENGINEER: Job = {
   },
   experienceList: [
     'Wrote automation test cases in Cucumber; utilizing Ruby with the capybara library and selenium webdriver',
-    'Automated over 1500 backlog test cases by writing them into integration, controller, and model tests. This reduced our regression cycle by 10 days',
+    'Automated 300+ manual backlog test cases by writing them into integration, controller, and model tests, helping cut the regression cycle from about 10 days to 1 day',
     'Created Jenkins builds to run test suites on a regular basis and organized fashion.',
     'Participated in both bug review processes and worked regularly using agile development methods.',
     'Rewrote an entire test suite from cucumber to Rspec to increase test consistency and reliability.',
@@ -153,6 +180,7 @@ export const GRANICUS_SOFTWARE_AUTOMATION_ENGINEER: Job = {
 };
 
 export const JOBS = [
+  PARAGON_FOUNDER,
   KAVA_LABS_SOFTWARE_ENGINEERING_MANAGER,
   KAVA_LABS_SR_SOFTWARE_ENGINEER,
   TEAMSNAP_SOFTWARE_ENGINEER,

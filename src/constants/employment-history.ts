@@ -2,12 +2,28 @@ import { EmploymentHistories } from './types';
 
 export const EMPLOYMENT_HISTORY: EmploymentHistories = [
   {
+    companyName: 'Paragon Sports Intelligence',
+    city: 'Denver',
+    state: 'CO',
+    jobTitle: 'Founder and Software Engineer',
+    startYear: '2026',
+    endYear: 'Present',
+  },
+  {
+    companyName: 'Kava Labs',
+    city: '(Remote)',
+    state: 'Denver, CO',
+    jobTitle: 'Software Engineering Manager',
+    startYear: '2025',
+    endYear: '2025',
+  },
+  {
     companyName: 'Kava Labs',
     city: '(Remote)',
     state: 'Denver, CO',
     jobTitle: 'Senior Software Engineer II',
     startYear: '2020',
-    endYear: 'Present',
+    endYear: '2025',
   },
   {
     companyName: 'TeamSnap',
@@ -29,7 +45,7 @@ export const EMPLOYMENT_HISTORY: EmploymentHistories = [
     companyName: 'Granicus',
     city: 'Denver',
     state: 'CO',
-    jobTitle: 'Quality Assurance Engineer',
+    jobTitle: 'Software Automation Engineer',
     startYear: '2015',
     endYear: '2017',
   },
