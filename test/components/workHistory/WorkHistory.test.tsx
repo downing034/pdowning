@@ -26,7 +26,7 @@ describe('WorkHistory', () => {
 
   it('renders company names and periods', () => {
     render(<WorkHistory />);
-    expect(screen.getByText(/Kava Labs · 2023/)).toBeInTheDocument();
+    expect(screen.getByText(/Kava Labs · 2025/)).toBeInTheDocument();
     expect(screen.getByText(/Kava Labs · 2020/)).toBeInTheDocument();
     expect(screen.getByText(/TeamSnap · 2019/)).toBeInTheDocument();
     expect(screen.getByText(/Granicus · 2017/)).toBeInTheDocument();
@@ -35,14 +35,14 @@ describe('WorkHistory', () => {
   it('renders compact stats', () => {
     render(<WorkHistory />);
     expect(screen.getByText('3')).toBeInTheDocument();
-    expect(screen.getByText('$300M')).toBeInTheDocument();
-    expect(screen.getByText('9%→78%')).toBeInTheDocument();
-    expect(screen.getByText('2wk→4d')).toBeInTheDocument();
+    expect(screen.getByText('$2.5B+')).toBeInTheDocument();
+    expect(screen.getByText('MobX→Redux')).toBeInTheDocument();
+    expect(screen.getByText('30%→70%')).toBeInTheDocument();
   });
 
   it('renders taglines on compact face', () => {
     render(<WorkHistory />);
-    expect(screen.getByText(/Built the team\. Built the process/)).toBeInTheDocument();
+    expect(screen.getByText(/Player-coach\. Half managing/)).toBeInTheDocument();
     expect(screen.getByText(/Architected the interface/)).toBeInTheDocument();
     expect(screen.getByText(/Cleaned house/)).toBeInTheDocument();
     expect(screen.getByText(/Modernized a legacy stack/)).toBeInTheDocument();
@@ -67,8 +67,8 @@ describe('WorkHistory', () => {
     });
 
     // After expanding, bullets should appear
-    expect(screen.getByText(/Led full engineering org/)).toBeInTheDocument();
-    expect(screen.getByText(/structured interview rubric/)).toBeInTheDocument();
+    expect(screen.getByText(/Player-coach manager of 3 engineers/)).toBeInTheDocument();
+    expect(screen.getByText(/pair-programming exercise/)).toBeInTheDocument();
 
     vi.useRealTimers();
   });
