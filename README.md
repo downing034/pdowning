@@ -1,36 +1,59 @@
-# Welcome to Paul's Portfolio
+# home.pdowning.com
 
-A simple React.js project serving as a personal portfolio website for myself. This project was built using [Create React App](https://github.com/facebook/create-react-app), but was nearly, immediately ejected so I could add test tooling not supported by Create React App.
+Personal portfolio site for Paul Downing, Senior Software Engineer and Engineering Manager (React, TypeScript, Ruby on Rails).
 
-**Project is Currently Deployed on Heroku:** [Paul's Portfolio](https://pdowning.herokuapp.com/)
-*NOTE: Project may take an extra few seconds to load on heroku since it's on the free version. Heroku sleeps apps that haven't been immediately visited to save money.*
+**Live site:** [home.pdowning.com](https://home.pdowning.com)
 
-Prerequisites:
- - You must have  [Node](https://nodejs.org/en/download/)
- - [Yarn]([https://yarnpkg.com/](https://yarnpkg.com/)) or some other javascript package manager (like npm) must be installed
+## Tech stack
 
-## Run the Project
+- **Framework:** React 18 with TypeScript
+- **Build tool:** Vite
+- **Styling:** Tailwind CSS, Framer Motion for animation
+- **Testing:** Vitest and React Testing Library, with coverage reporting via V8
+- **Code quality:** ESLint (typescript-eslint, React, React Hooks, and jsx-a11y rules), Prettier, Husky and lint-staged pre-commit hooks
+- **CI:** GitHub Actions runs lint, format check, type check, build, and tests with coverage on every push and pull request
+- **Hosting:** Netlify
 
-From the root directory:
-- `yarn install` to install the necessary packages for the project
-- `yarn start` Runs the app in the development mode.  Open  [http://localhost:3000](http://localhost:3000/)  to view it in the browser.
+## Project structure
 
-Page will hot reload if you make edits and lint errors will show in the console.
+```
+src/
+  components/   UI sections (profile, about, work history, portfolio, abilities, contact)
+  constants/    Site content: jobs, employment history, projects, skills
+  hooks/        Custom React hooks (scroll spy for navigation)
+  styles/       Global styles
+test/           Component, constant, and hook tests (mirrors src/)
+```
 
+## Getting started
 
-## Build the Project
-From the root directory:
-- `yarn build` Builds the app for production to the  `build`  folder.
+Requires Node.js 22 and Yarn.
 
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn install
+yarn dev
+```
 
-The build is minified and the filenames include the hashes.  Your app is ready to be deployed!
+## Scripts
 
+| Command | Description |
+| --- | --- |
+| `yarn dev` | Start the Vite dev server |
+| `yarn build` | Type check and build for production |
+| `yarn preview` | Preview the production build locally |
+| `yarn test` | Run the test suite |
+| `yarn test:watch` | Run tests in watch mode |
+| `yarn test:coverage` | Run tests with a coverage report (output in `test/coverage/`) |
+| `yarn lint` / `yarn lint:fix` | Lint, or lint and auto-fix |
+| `yarn format` / `yarn format:check` | Format with Prettier, or check formatting |
 
-## Run the Tests
+Pre-commit hooks run ESLint and Prettier on staged files automatically.
 
-Testing is written using Jest, Jest-Enzyme, Rosie (factories), and Chancejs. This project has full test coverage on all components.
-From the root directory:
-- `yarn test` to run all the tests in the project
-- `yarn test path/to/test` replace 'path/to/test' with a specific test file to run
-- `yarn test --coverage` to run all the tests in the project and get a full coverage report on each file/line. Coverage can be viewed in the terminal or by navigating to `test/coverage/lcov-report/index.html` on your computer and opening the file in a browser.
+## Deployment
+
+Netlify builds and deploys from the default branch using `yarn build`. Client-side routes are handled with a catch-all redirect to `index.html` (see `netlify.toml`).
+
+## Contact
+
+- LinkedIn: [linkedin.com/in/paul-w-downing](https://linkedin.com/in/paul-w-downing)
+- Email: downing034@gmail.com
