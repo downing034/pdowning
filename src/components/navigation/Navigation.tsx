@@ -76,7 +76,7 @@ const Navigation = () => {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="relative flex-shrink-0 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full no-underline"
+              className="relative shrink-0 px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full no-underline"
               style={{ color: isActive ? 'white' : 'rgba(255,255,255,0.5)' }}
               {...(isActive ? { 'aria-current': 'page' as const } : {})}
             >
@@ -99,7 +99,7 @@ const Navigation = () => {
         <a
           href={ResumeDownload}
           download
-          className="flex-shrink-0 ml-2 px-4 py-2 text-sm font-medium text-white rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg no-underline whitespace-nowrap inline-flex items-center gap-1.5"
+          className="shrink-0 ml-2 px-4 py-2 text-sm font-medium text-white rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg no-underline whitespace-nowrap inline-flex items-center gap-1.5"
           style={{
             background: activeColor,
             boxShadow: `0 0 0 0 transparent`,
@@ -118,11 +118,11 @@ const Navigation = () => {
         </a>
 
         {/* Contact icons */}
-        <div className="flex-shrink-0 w-px h-5 bg-white/10 mx-1" />
+        <div className="shrink-0 w-px h-5 bg-white/10 mx-1" />
         <a
           href="mailto:downing034@gmail.com"
           aria-label="Email"
-          className="flex-shrink-0 p-1.5 rounded-full text-white/40 hover:text-[#00c8ff] transition-colors duration-200"
+          className="shrink-0 p-1.5 rounded-full text-white/40 hover:text-[#00c8ff] transition-colors duration-200"
         >
           <IconEnvelope />
         </a>
@@ -131,7 +131,7 @@ const Navigation = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          className="flex-shrink-0 p-1.5 rounded-full text-white/40 hover:text-[#00c8ff] transition-colors duration-200"
+          className="shrink-0 p-1.5 rounded-full text-white/40 hover:text-[#00c8ff] transition-colors duration-200"
         >
           <IconLinkedIn />
         </a>
@@ -140,7 +140,7 @@ const Navigation = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          className="flex-shrink-0 p-1.5 rounded-full text-white/40 hover:text-[#00c8ff] transition-colors duration-200"
+          className="shrink-0 p-1.5 rounded-full text-white/40 hover:text-[#00c8ff] transition-colors duration-200"
         >
           <IconGitHub />
         </a>

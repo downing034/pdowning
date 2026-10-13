@@ -34,7 +34,7 @@ const SkillBar = ({ name, level, animate, delay = 0 }: SkillBarProps) => {
           initial={{ width: 0 }}
           animate={animate ? { width: `${percentage}%` } : { width: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut', delay }}
-          className="h-full rounded-full bg-gradient-to-r from-primary to-primary-light"
+          className="h-full rounded-full bg-linear-to-r from-primary to-primary-light"
         />
       </div>
     </div>

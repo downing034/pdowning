@@ -41,7 +41,7 @@ describe('SkillBar', () => {
 
   it('renders the animated fill bar', () => {
     const { container } = render(<SkillBar name="React" level={5} animate={true} />);
-    const fill = container.querySelector('.bg-gradient-to-r');
+    const fill = container.querySelector('.bg-linear-to-r');
     expect(fill).toBeInTheDocument();
   });
 

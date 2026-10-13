@@ -153,7 +153,7 @@ const PortfolioItem = ({ project, index }: PortfolioItemProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsExpanded(false)}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-6"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-xs p-6"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
